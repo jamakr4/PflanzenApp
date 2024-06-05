@@ -1,0 +1,34 @@
+{
+  "hash": "fbaffc4d",
+  "configHash": "c1c58923",
+  "lockfileHash": "d3322de6",
+  "browserHash": "4ef37f47",
+  "optimized": {
+    "@angular/core": {
+      "src": "../../../../../node_modules/@angular/core/fesm2022/core.mjs",
+      "file": "@angular_core.js",
+      "fileHash": "e1f4d7aa",
+      "needsInterop": false
+    },
+    "@angular/platform-browser": {
+      "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
+      "file": "@angular_platform-browser.js",
+      "fileHash": "01858b82",
+      "needsInterop": false
+    },
+    "@angular/router": {
+      "src": "../../../../../node_modules/@angular/router/fesm2022/router.mjs",
+      "file": "@angular_router.js",
+      "fileHash": "d52e24e0",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-DIKTDJPS": {
+      "file": "chunk-DIKTDJPS.js"
+    },
+    "chunk-NKWK6WG7": {
+      "file": "chunk-NKWK6WG7.js"
+    }
+  }
+}
