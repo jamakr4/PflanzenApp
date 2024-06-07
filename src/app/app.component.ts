@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { RouterOutlet } from '@angular/router';
-import { ShoplandingpageComponent } from './shoplandingpage/shoplandingpage.component';
+import { ShopLandingPageComponent } from './shop-landing-page/shop-landing-page.component';
+import { PlantDetailShopPageComponent } from './plant-detail-shop-page/plant-detail-shop-page.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,ShoplandingpageComponent,],
+  imports: [RouterOutlet,ShopLandingPageComponent,PlantDetailShopPageComponent,RouterLink],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

@@ -33,3 +33,31 @@ ul a{
     padding: 1rem;
     display: inline-block;
 }
+
+/* Searchbar Styling */
+input
+{
+ border-radius:10rem 0 0 10rem;
+ border: none;
+ height: 2rem;
+ width: 10rem;
+ background-color: white;
+ font-size: 1rem;
+ font-weight: 500;
+ outline: none;
+}
+
+#sb
+{
+    color: darkgreen;
+    height: 2rem;
+    width: 4rem;
+    font-size: 1rem;
+    border-radius: 0 10rem 10rem 0;
+    border: none;
+    background-color: aliceblue;
+    color: white;
+    background-color: darkgreen;
+    opacity: 0.8;
+    outline: none;
+}

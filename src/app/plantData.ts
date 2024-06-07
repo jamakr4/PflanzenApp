@@ -1,6 +1,6 @@
 import { Plant } from "./interface/plants";
 
-export const Plants: Plant[] = [
+export const sample_plants: Plant[] = [
     {
     id: 0,
     name: "Lucky bamboo",
@@ -21,7 +21,7 @@ export const Plants: Plant[] = [
     bestseller: false, 
     indoor: true,
     outdoor: false,
-    imageUrl: ["src/assets/images/00Dracaena_sanderiana/ Dracaena sanderiana1.jpg", "src/assets/images/00Dracaena_sanderiana/ Dracaena sanderiana2.jpg", "src/assets/images/00Dracaena_sanderiana/ Dracaena sanderiana3.jpg"],
+    imageUrl: ["src/assets/00Dracaena_sanderiana/Dracaena_sanderiana1.jpg","/assets/00Dracaena_sanderiana/ Dracaena sanderiana1.jpg", "src/assets/images/00Dracaena_sanderiana/ Dracaena sanderiana2.jpg", "src/assets/images/00Dracaena_sanderiana/ Dracaena sanderiana3.jpg"],
 
     nickname: "",
     size: NaN, 

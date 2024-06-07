@@ -1,0 +1,82 @@
+ul
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style-type:none;
+    padding: 0;
+}
+
+li a
+{
+    height: 12.5rem;
+    width: 10rem;
+    border: 1px solid violet;
+    border-radius: 1rem;
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    color: darkolivegreen;
+}
+
+li a:hover
+{
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+li a img
+{
+    object-fit: cover;
+    height: 14.5rem;
+}
+
+.content
+{
+    margin-top: 0.3rem;
+    margin-left: 1rem;
+    padding: 0.5r 1rem;
+    position: relative;
+    height: 7rem;
+    background-color: aqua;
+}
+
+.sidescrollbar {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 100%; /* or any desired width */
+    background-color: black;
+}
+
+
+.wrapper {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;  
+    white-space: nowrap; 
+    border: 1px solid aqua; 
+    padding: 0.5rem; 
+    margin: 0.5rem; 
+    }
+    
+    .wrapper .item {
+        min-width: 110px;
+        height: 110px;
+        line-height: 110px;
+        background-color: blue;
+        margin-right: 1px;
+        border-radius: 1rem; 
+        display: flex; 
+        justify-content: center;     
+        align-items: center; 
+        color: darkolivegreen; 
+        cursor: pointer; 
+    }
+    
+    .wrapper .item:hover {
+        background-color: lightblue;
+    }
+

@@ -1,12 +1,14 @@
 <header>
     <div class="container">
+
         <form class="search-form">
-            <input type="text" placeholder="Search">
-            <button type="submit">Search</button>
+            <input #s type="text" placeholder="Search" (keyup.enter)="search(s.value)" [value]="searchTerm"/>
+            <button id="sb" (click)="search(s.value)">Search</button>
           </form>
+          
             <ul>
                 <li>
-                    <a routerLink="/cartPage"></a>
+                    <a routerLink="shoppingcart"></a>
                     Cart <span>3</span>
                 </li>
             </ul>

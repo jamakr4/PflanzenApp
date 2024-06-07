@@ -1,0 +1,67 @@
+<header>
+    <app-shopheader></app-shopheader>
+</header>
+
+
+<div>
+<div class="wrapper">
+    <div class="item" *ngFor="let item of plants" >
+        <li *ngIf="item.bestseller">
+        <img [src]="item.imageUrl" alt="Item image">
+        <div class="content">
+            <div class="name">{{ item.name }}</div>
+            <div class="rating">{{ item.rating }}</div>
+            <div class="detail">{{ item.price | currency }}</div>
+        </div>
+    </li>
+    </div>
+</div>
+
+
+
+
+
+
+
+<div class="sidescrollbar">
+    <ul>
+        <ng-container *ngFor="let p of plants; let i = index">
+            <li *ngIf="p.bestseller">  
+                <a routerLink="detail"></a>
+                <img [src]="p.imageUrl[0]">
+                <div class="content">
+                    <div class="name">
+                        {{ p.name }}
+                    </div>
+                    <div class="rating">
+                        <span class="star">⋆</span> {{ p.rating }}
+                    </div>
+                    <div class="detail">
+                        {{ p.price | currency }}
+                    </div>
+                </div>
+            </li>
+        </ng-container>
+    </ul>
+</div>
+
+  
+
+
+<ul>
+    <li *ngFor="let p of plants">
+        <a routerLink="/detail/{{p.id}}"></a>
+        <img [src]="p.imageUrl[0]">
+        <div class="content">
+        <div class="name">
+            {{p.name}}
+        </div>
+        <div class="rating">
+            <span class="star">⋆</span> {{p.rating}}
+        </div>
+        <div class="detail">
+            {{p.price | currency}}
+        </div>
+    </div>
+    </li>
+</ul>
