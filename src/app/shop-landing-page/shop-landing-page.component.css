@@ -1,3 +1,14 @@
+/* Slideshow - Erstmal nur Platzhalter*/
+#carousel
+{
+    margin-top: 1rem;
+    width: 25rem;
+    height: 12rem;
+    background-color: aqua;
+    /*Muss noch zentriert werden*/
+}
+
+/* sonstiges*/
 ul
 {
     display: flex;

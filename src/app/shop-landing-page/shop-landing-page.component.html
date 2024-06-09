@@ -24,26 +24,14 @@
                         {{item.price | currency}} <br>
                         {{item.rating}}
                     </div>
-        
                 </div>
-                
             </li>
         </div>
     </ng-container>
 </div>
 
 
-
-
-
-
-  
-
-
-
-
-
-
+<!--Alle Items einfügen -->
 <ul>
     <li *ngFor="let p of plants">
         <a routerLink="/details/{{p.id}}">
