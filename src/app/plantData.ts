@@ -1,4 +1,4 @@
-import { Plant } from "./interface/plants";
+import { Plant } from "./classes/plants";
 
 export const sample_plants: Plant[] = [
     {
@@ -21,7 +21,7 @@ export const sample_plants: Plant[] = [
     bestseller: false, 
     indoor: true,
     outdoor: false,
-    imageUrl: ["src/assets/00Dracaena_sanderiana/Dracaena_sanderiana1.jpg","/assets/00Dracaena_sanderiana/ Dracaena sanderiana1.jpg", "src/assets/images/00Dracaena_sanderiana/ Dracaena sanderiana2.jpg", "src/assets/images/00Dracaena_sanderiana/ Dracaena sanderiana3.jpg"],
+    imageUrl: ["/ Dracaena_sanderiana1.png", "/ Dracaena_sanderiana2.png", "/ Dracaena_sanderiana3.png"],
 
     nickname: "",
     size: NaN, 
@@ -44,10 +44,10 @@ export const sample_plants: Plant[] = [
         tips: ["People with allergies should avoid this plant", "One of the most popular houseplants"],
         promotion: false, 
         rating: 4.4,
-        bestseller: false, 
+        bestseller: true, 
         indoor: true,
         outdoor: false,
-        imageUrl: ["src/assets/images/01Ficus_benjamina/Ficus benjamina1.jpg","src/assets/images/01Ficus_benjamina/Ficus benjamina2.jpg","src/assets/images/01Ficus_benjamina/Ficus benjamina3.jpg"],
+        imageUrl: ["/Ficus_benjamina1.png","/Ficus_benjamina1.png","/Ficus_benjamina1.png"],
     
         nickname: "",
         size: NaN, 
@@ -73,7 +73,7 @@ export const sample_plants: Plant[] = [
             bestseller: false, 
             indoor: true,
             outdoor: true,
-            imageUrl: ["","",""],
+            imageUrl: ["/Ocimum_basilicum1.png","/Ocimum_basilicum2.png","/Ocimum_basilicum3.png"],
         
             nickname: "",
             size: NaN, 
@@ -100,7 +100,7 @@ export const sample_plants: Plant[] = [
                 bestseller: false, 
                 indoor: true,
                 outdoor: false,
-                imageUrl: ["src/assets/images/03Crassula_ovata/Crassula ovata1.jpg","src/assets/images/03Crassula_ovata/Crassula ovata2.jpg","src/assets/images/03Crassula_ovata/Crassula ovata3.jpg"],
+                imageUrl: ["/Crassula_ovata1.png","/Crassula_ovata2.png","/Crassula_ovata3.png"],
             
                 nickname: "",
                 size: NaN, 
@@ -127,7 +127,7 @@ export const sample_plants: Plant[] = [
                     bestseller: false, 
                     indoor: true,
                     outdoor: true,
-                    imageUrl: ["src/assets/images/04Echeveria_elegans/Echeveria_elegans1.jpg","src/assets/images/04Echeveria_elegans/Echeveria_elegans2.jpg","src/assets/images/04Echeveria_elegans/Echeveria_elegans3.jpg"],
+                    imageUrl: ["/Echeveria_elegans1.png","/Echeveria_elegans2.png","/Echeveria_elegans3.png"],
                 
                     nickname: "",
                     size: NaN, 
@@ -151,10 +151,10 @@ export const sample_plants: Plant[] = [
                         tips: [],
                         promotion: false, 
                         rating: 3.9,
-                        bestseller: false, 
+                        bestseller: true, 
                         indoor: true,
                         outdoor: true,
-                        imageUrl: ["src/assets/images/05Sansevieria_trifasciata_Laurentii/Sansevieria_trifasciata_Laurentii1.jpg","src/assets/images/05Sansevieria_trifasciata_Laurentii/Sansevieria_trifasciata_Laurentii2.jpg","src/assets/images/05Sansevieria_trifasciata_Laurentii/Sansevieria_trifasciata_Laurentii3.jpg"],
+                        imageUrl: ["/Sansevieria_trifasciata_Laurentii1.png","/Sansevieria_trifasciata_Laurentii2.png","/Sansevieria_trifasciata_Laurentii3.png"],
                     
                         nickname: "",
                         size: NaN, 
@@ -181,7 +181,7 @@ export const sample_plants: Plant[] = [
                             bestseller: false, 
                             indoor: true,
                             outdoor: true,
-                            imageUrl: ["src/assets/images/06Hedera_helix/Hedra_helix1.jpg","src/assets/images/06Hedera_helix/Hedra_helix2.jpg","src/assets/images/06Hedera_helix/Hedra_helix3.jpg"],
+                            imageUrl: ["/Hedra_helix1.png","/Hedra_helix2.png","/Hedra_helix3.png"],
                         
                             nickname: "",
                             size: NaN, 
@@ -208,7 +208,7 @@ export const sample_plants: Plant[] = [
                                 bestseller: false, 
                                 indoor: true,
                                 outdoor: false,
-                                imageUrl:["src/assets/images/07phalaenopsis_orchid/phalaenopsis_orchid1.jpg","src/assets/images/07phalaenopsis_orchid/phalaenopsis_orchid2.jpg","src/assets/images/07phalaenopsis_orchid/phalaenopsis_orchid3.jpg"],
+                                imageUrl:["/phalaenopsis_orchid1.png","/phalaenopsis_orchid2.png","/phalaenopsis_orchid3.png"],
                             
                                 nickname: "",
                                 size: NaN, 
@@ -235,7 +235,7 @@ export const sample_plants: Plant[] = [
                                     bestseller: true, 
                                     indoor: true,
                                     outdoor: false,
-                                    imageUrl: ["src/assets/images/08Ficus lyrata/Ficus lyrata1.jpg","src/assets/images/08Ficus lyrata/Ficus lyrata2.jpg","src/assets/images/08Ficus lyrata/Ficus lyrata3.jpg"],
+                                    imageUrl: ["/Ficus_lyrata1.png","public/Ficus_lyrata2.png","public/Ficus_lyrata3.png"],
                                 
                                     nickname: "",
                                     size: NaN, 
@@ -262,7 +262,7 @@ export const sample_plants: Plant[] = [
                                         bestseller: true, 
                                         indoor: true,
                                         outdoor: false,
-                                        imageUrl: ["src/assets/images/09Monstera_deliciosa/Monstera_deliciosa1.jpg","src/assets/images/09Monstera_deliciosa/Monstera_deliciosa2.jpg","src/assets/images/09Monstera_deliciosa/Monstera_deliciosa3.jpg"],
+                                        imageUrl: ["/Monstera_deliciosa1.png","public/Monstera_deliciosa2.png","public/Monstera_deliciosa3.png"],
                                     
                                         nickname: "",
                                         size: NaN, 
@@ -289,7 +289,7 @@ export const sample_plants: Plant[] = [
                                             bestseller: false, 
                                             indoor: true,
                                             outdoor: true,
-                                            imageUrl: ["src/assets/images/10Lavandula/Lavandula1.jpg","src/assets/images/10Lavandula/Lavandula2.jpg","src/assets/images/10Lavandula/Lavandula3.jpg"],
+                                            imageUrl: ["/Lavandula1.png","/Lavandula2.png","/Lavandula3.png"],
                                         
                                             nickname: "",
                                             size: NaN, 
@@ -316,7 +316,7 @@ export const sample_plants: Plant[] = [
                                                 bestseller: false, 
                                                 indoor: true,
                                                 outdoor: false,
-                                                imageUrl: ["src/assets/images/11Chlorophytum_comosum/Chlorophytum_comosum1.jpg","src/assets/images/11Chlorophytum_comosum/Chlorophytum_comosum2.jpg","src/assets/images/11Chlorophytum_comosum/Chlorophytum_comosum3.jpg"],
+                                                imageUrl: ["/Chlorophytum_comosum1.png","/Chlorophytum_comosum2.png","/Chlorophytum_comosum3.png"],
                                             
                                                 nickname: "",
                                                 size: NaN, 
@@ -343,7 +343,7 @@ export const sample_plants: Plant[] = [
                                                     bestseller: false, 
                                                     indoor: true,
                                                     outdoor: false,
-                                                    imageUrl: ["src/assets/images/12Bodhi_religo/Bodhi_religo1.jpg"],
+                                                    imageUrl: ["/Bodhi_religo1.png"],
                                                 
                                                     nickname: "",
                                                     size: NaN, 
@@ -370,7 +370,7 @@ export const sample_plants: Plant[] = [
                                                         bestseller: false, 
                                                         indoor: true,
                                                         outdoor: false,
-                                                        imageUrl: ["src/assets/images/13Sansevieria_trifasciata/Sansevieria_trifasciata1.jpg","src/assets/images/13Sansevieria_trifasciata/Sansevieria_trifasciata2.jpg","src/assets/images/13Sansevieria_trifasciata/Sansevieria_trifasciata3.jpg"],
+                                                        imageUrl: ["/Sansevieria_trifasciata1.png","/Sansevieria_trifasciata2.png","public/Sansevieria_trifasciata3.png"],
                                                     
                                                         nickname: "",
                                                         size: NaN, 
@@ -397,7 +397,7 @@ export const sample_plants: Plant[] = [
                                                             bestseller: true, 
                                                             indoor: true,
                                                             outdoor: true,
-                                                            imageUrl: ["src/assets/images/14chinocactus_grusonii/chinocactus_grusonii1.jpg","src/assets/images/14chinocactus_grusonii/chinocactus_grusonii2.jpg","src/assets/images/14chinocactus_grusonii/chinocactus_grusonii3.jpg"],
+                                                            imageUrl: ["/chinocactus_grusonii1.png","/chinocactus_grusonii2.png","/chinocactus_grusonii3.png"],
                                                         
                                                             nickname: "",
                                                             size: NaN, 

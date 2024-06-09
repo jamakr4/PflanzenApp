@@ -2,66 +2,59 @@
     <app-shopheader></app-shopheader>
 </header>
 
-
-<div>
-<div class="wrapper">
-    <div class="item" *ngFor="let item of plants" >
-        <li *ngIf="item.bestseller">
-        <img [src]="item.imageUrl" alt="Item image">
-        <div class="content">
-            <div class="name">{{ item.name }}</div>
-            <div class="rating">{{ item.rating }}</div>
-            <div class="detail">{{ item.price | currency }}</div>
-        </div>
-    </li>
-    </div>
-</div>
+<div id="carousel"> <!--SlideShow for QuizLink and Offer Promotion--></div>
 
 
 
 
 
 
+<h4>Shop our bestsellers</h4>
 
-<div class="sidescrollbar">
-    <ul>
-        <ng-container *ngFor="let p of plants; let i = index">
-            <li *ngIf="p.bestseller">  
-                <a routerLink="detail"></a>
-                <img [src]="p.imageUrl[0]">
+<div class="wrapper"> <!--Horizotal Scrollbar for Bestsellers-->
+    <ng-container *ngFor="let item of plants">
+        <div class="item" *ngIf="item.bestseller">
+            <li>
+                <a routerLink="/details/{{item.id}}">
+                    <img [src] = "item.imageUrl[0]"/>
+                </a>
                 <div class="content">
                     <div class="name">
-                        {{ p.name }}
+                        {{item.name}} <br>
+                        {{item.price | currency}} <br>
+                        {{item.rating}}
                     </div>
-                    <div class="rating">
-                        <span class="star">⋆</span> {{ p.rating }}
-                    </div>
-                    <div class="detail">
-                        {{ p.price | currency }}
-                    </div>
+        
                 </div>
+                
             </li>
-        </ng-container>
-    </ul>
+        </div>
+    </ng-container>
 </div>
+
+
+
+
+
 
   
 
 
+
+
+
+
 <ul>
     <li *ngFor="let p of plants">
-        <a routerLink="/detail/{{p.id}}"></a>
-        <img [src]="p.imageUrl[0]">
+        <a routerLink="/details/{{p.id}}">
+            <img [src] = "p.imageUrl[0]"/>
+        </a>
         <div class="content">
-        <div class="name">
-            {{p.name}}
+            <div class="name">
+                {{p.name}} <br>
+                {{p.price | currency}} <br>
+                {{p.rating}}
+            </div>
         </div>
-        <div class="rating">
-            <span class="star">⋆</span> {{p.rating}}
-        </div>
-        <div class="detail">
-            {{p.price | currency}}
-        </div>
-    </div>
     </li>
 </ul>

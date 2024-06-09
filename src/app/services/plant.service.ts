@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Plant } from '../interface/plants';
+import { Plant } from '../classes/plants';
 import { sample_plants } from '../plantData';
 
 @Injectable({
@@ -20,7 +20,7 @@ export class PlantService {
   }
 
   getPlantByID(PlantId: string): Plant {
-    const id = Number(PlantId); // Convert PlantId to number
+    const id = Number(PlantId); 
     return this.getAll().find(Plant => Plant.id === id) ?? new Plant();
   }
 }

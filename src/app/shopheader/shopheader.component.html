@@ -1,14 +1,16 @@
 <header>
     <div class="container">
 
-        <form class="search-form">
-            <input #s type="text" placeholder="Search" (keyup.enter)="search(s.value)" [value]="searchTerm"/>
+        <input id="back" type="button" value=" ← " onclick="history.back()"> <!--BackButton-->
+
+        <form class="search-form"> <!--Searchbar-->
+            <input #s id="search" type="text" placeholder="Search" (keyup.enter)="search(s.value)" [value]="searchTerm"/>
             <button id="sb" (click)="search(s.value)">Search</button>
           </form>
           
             <ul>
                 <li>
-                    <a routerLink="shoppingcart"></a>
+                    <a routerLink="shoppingcart"></a> <!--ShoppingCart-->
                     Cart <span>3</span>
                 </li>
             </ul>

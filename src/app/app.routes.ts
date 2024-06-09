@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { PlantDetailShopPageComponent } from './plant-detail-shop-page/plant-detail-shop-page.component';
+import { PlantDetailShopPageComponent } from './shop-detail-page/plant-detail-shop-page.component';
 import { ShopLandingPageComponent } from './shop-landing-page/shop-landing-page.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { RouterLink } from '@angular/router';

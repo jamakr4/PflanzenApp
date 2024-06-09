@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ShopheaderComponent } from '../shopheader/shopheader.component';
-import { Plant } from '../interface/plants';
+import { Plant } from '../classes/plants';
 import { PlantService } from '../services/plant.service';
 import { CommonModule } from '@angular/common';
 import { NgIf } from '@angular/common';

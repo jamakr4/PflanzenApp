@@ -39,8 +39,11 @@ li a img
     margin-left: 1rem;
     padding: 0.5r 1rem;
     position: relative;
-    height: 7rem;
-    background-color: aqua;
+    height: auto;
+    width: 9rem;
+    background-color: grey;
+    
+    
 }
 
 .sidescrollbar {
@@ -60,11 +63,12 @@ li a img
     border: 1px solid aqua; 
     padding: 0.5rem; 
     margin: 0.5rem; 
+    height: 15rem;
     }
     
     .wrapper .item {
-        min-width: 110px;
-        height: 110px;
+        width: 10rem;
+        height: 14.5rem;
         line-height: 110px;
         background-color: blue;
         margin-right: 1px;
