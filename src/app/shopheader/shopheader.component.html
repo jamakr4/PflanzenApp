@@ -1,18 +1,18 @@
 <header>
-    <div class="container">
+  <div class="container">
 
-        <input id="back" type="button" value=" ← " onclick="history.back()"> <!--BackButton-->
+      <input id="back" type="button" value=" ← " onclick="history.back()"> <!--BackButton-->
 
-        <form class="search-form"> <!--Searchbar-->
-            <input #s id="search" type="text" placeholder="Search" (keyup.enter)="search(s.value)" [value]="searchTerm"/>
-            <button id="sb" (click)="search(s.value)">Search</button>
-          </form>
-          
-            <ul>
-                <li>
-                    <a routerLink="shoppingcart"></a> <!--ShoppingCart-->
-                    Cart <span>3</span>
-                </li>
-            </ul>
-    </div>
+      <form class="search-form"> <!--Searchbar-->
+          <input #s id="search" type="text" placeholder="Search" (keyup.enter)="search(s.value)" [value]="searchTerm"/>
+          <button id="sb" (click)="search(s.value)">Search</button>
+        </form>
+        
+          <ul>
+              <li>
+                  <a routerLink="shoppingcart"></a> <!--ShoppingCart-->
+                  Cart
+              </li>
+          </ul>
+  </div>
 </header>
