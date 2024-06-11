@@ -3,8 +3,12 @@
     background-color: goldenrod;
 }
 
-#c
+img
 {
-    height: 7rem;
-    width: 15rem;
+    border-radius: 2rem;
+    flex: 1 0;
+    object-fit: cover;
+    height: 20rem;
+    margin: 1rem;
+
 }

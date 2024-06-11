@@ -20,5 +20,9 @@ export const routes: Routes = [
     },
     {
         path:"search/:searchTerm", component:ShopLandingPageComponent
-    }
+    },
+    {
+      path:"cart-page", component:ShoppingCartComponent
+    },
+    
 ];
