@@ -3,7 +3,7 @@ import { ShopheaderComponent } from '../shopheader/shopheader.component';
 import { Cart } from '../classes/cart';
 import { CartService } from '../services/cart.service';
 import { CartItem } from '../classes/cart-item';
-import { ShoppingCartTitleComponent } from '../shopping-cart-title/shopping-cart-title.component';
+
 import { RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { NgFor } from '@angular/common';
@@ -13,7 +13,7 @@ import { NotFoundComponent } from '../not-found/not-found.component';
 @Component({
   selector: 'app-shopping-cart',
   standalone: true,
-  imports: [ShopheaderComponent, ShoppingCartTitleComponent,RouterLink,CommonModule,NgFor,NotFoundComponent],
+  imports: [ShopheaderComponent,RouterLink,CommonModule,NgFor,NotFoundComponent],
   templateUrl: './shopping-cart.component.html',
   styleUrl: './shopping-cart.component.css'
 })

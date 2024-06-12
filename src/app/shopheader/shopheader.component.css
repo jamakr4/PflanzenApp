@@ -12,6 +12,7 @@ header
 a
 {
     color: red;
+    text-decoration: none;
 }
 
 a:hover{

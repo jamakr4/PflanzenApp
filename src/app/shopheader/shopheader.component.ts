@@ -2,10 +2,12 @@ import { Component } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 
+
+
 @Component({
   selector: 'app-shopheader',
   standalone: true,
-  imports: [],
+  imports: [RouterLink,],
   templateUrl: './shopheader.component.html',
   styleUrl: './shopheader.component.css'
 })
