@@ -7,14 +7,14 @@ import { NgIf } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { RouterOutlet } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
-
+import { NotFoundComponent } from '../not-found/not-found.component';
 
 
 
 @Component({
   selector: 'app-shop-landing-page',
   standalone: true,
-  imports: [ShopheaderComponent,CommonModule,NgIf,RouterLink, RouterOutlet
+  imports: [ShopheaderComponent,CommonModule,NgIf,RouterLink, RouterOutlet,NotFoundComponent
   ],
   templateUrl: './shop-landing-page.component.html',
   styleUrl: './shop-landing-page.component.css'

@@ -7,12 +7,13 @@ import { ShoppingCartTitleComponent } from '../shopping-cart-title/shopping-cart
 import { RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { NgFor } from '@angular/common';
+import { NotFoundComponent } from '../not-found/not-found.component';
 
 
 @Component({
   selector: 'app-shopping-cart',
   standalone: true,
-  imports: [ShopheaderComponent, ShoppingCartTitleComponent,RouterLink,CommonModule,NgFor],
+  imports: [ShopheaderComponent, ShoppingCartTitleComponent,RouterLink,CommonModule,NgFor,NotFoundComponent],
   templateUrl: './shopping-cart.component.html',
   styleUrl: './shopping-cart.component.css'
 })
