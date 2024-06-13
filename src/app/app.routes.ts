@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { PlantDetailShopPageComponent } from './shop-detail-page/plant-detail-shop-page.component';
 import { ShopLandingPageComponent } from './shop-landing-page/shop-landing-page.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { HomePageComponent } from './home-page/home-page.component';
 import { RouterLink } from '@angular/router';
 import { RouterOutlet } from '@angular/router';
 
@@ -24,5 +25,7 @@ export const routes: Routes = [
     {
       path:"cart-page", component:ShoppingCartComponent
     },
-    
+    {
+        path:"home", component:HomePageComponent
+    }
 ];

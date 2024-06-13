@@ -1,0 +1,28 @@
+div {
+  position: fixed;
+  bottom: 2vh;
+  width: 80vw;
+  left: 50vw;
+  padding: 2vh;
+  background: var(--container-bg);
+  border-radius: 2vh;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 1vh 1vh /*var(--container-shadow)*/ black;
+}
+
+button {
+  padding: 0;
+  font-size: 3vh;
+  color: var(--text-color);
+  border: none;
+  background: none;
+  margin: 0 1vh;
+  transition: 1s ease;
+}
+
+button.active {
+  color: var(--text-highlight-color);
+}

@@ -1,0 +1,12 @@
+.test {
+    width: 25rem;
+    height: 10rem;
+    background-color: aqua;
+    border: 1px solid black; 
+}
+img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}

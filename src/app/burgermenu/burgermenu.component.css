@@ -1,0 +1,35 @@
+
+button {
+  width: 90vw;
+}
+
+div {
+  background: var(--secondary-color);
+  padding: 2vh;
+  border-radius: 2vh;
+  width: 85vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+table {
+  width: 100%;
+}
+
+tr {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+td {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+span.active {
+  color: var(--text-highlight-color);
+}
