@@ -1,1 +1,56 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --background-color: #090D05;
+    --text-color: #FFFFFF;
+    --text-highlight-color: #9AB91E;
+    --container-bg: #224618;
+    --container-shadow: rgba(0, 0, 0, 0.1);
+    --primary-color: #4D7B38;
+    --primary-hover-color: #4EB15E;
+    --secondary-color: #2F2F2F;
+    --button-color: #D6AB11;
+    --button-text-color: black;
+    --red-color: #7F1E1E;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body.light-mode {
+    --background-color: #EAF4EA;       /* Very light green background */
+    --text-color: #2F4F2F;             /* Deep green text color */
+    --text-highlight-color: #6FAF48;   /* Vibrant green for highlighted text */
+    --container-bg: #D2E3D2;           /* Pale green for container backgrounds */
+    --container-shadow: rgba(47, 79, 47, 0.1); /* Soft green shadow for containers */
+    --primary-color: #5E935E;          /* Medium green for primary elements */
+    --primary-hover-color: #7FBF7F;    /* Light green for hover states */
+    --secondary-color: #839C83;        /* Muted greenish-gray for secondary elements */
+    --button-color: #8FD48E;           /* Bright green for buttons */
+    --button-text-color: #2F4F2F;      /* Deep green for button text */
+    --red-color: #A84A4A;              /* Warm red with a green undertone for alerts/warnings */
+  }
+  
+  body {
+    background: var(--background-color);
+    max-width: 100vw;
+    overflow-x: hidden;
+    padding-top: 15vh;
+    color: var(--text-color);
+    font-size: 2vh;
+
+  }
+  
+  button {
+    padding: 2vh;
+    border-radius: 2vh;
+    border: none;
+    background: var(--secondary-color);
+    font-size: 2vh;
+    color: var(--text-color);
+  }
+  
+  button.primary {
+    background: var(--button-color);
+    color: var(--button-text-color);
+  }
