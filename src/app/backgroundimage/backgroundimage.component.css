@@ -1,7 +1,8 @@
 div {
-  position: absolute;
+  position: fixed;
   top: 0;
-  width: 100%;
+  left:0;
+  width: 100vw;
   height: 25vh;
   overflow: hidden;
   border-bottom-left-radius: 2vh;

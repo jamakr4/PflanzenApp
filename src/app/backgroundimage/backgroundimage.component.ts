@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Input } from '@angular/core';
 
 @Component({
   selector: 'app-backgroundimage',
@@ -8,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './backgroundimage.component.css'
 })
 export class BackgroundimageComponent {
-  image = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fjooinn.com%2Fimages%2Fgreen-plants-82.jpg&f=1&nofb=1&ipt=35e3fe98963512fdd02c3362a0f983b0d95f9c9279647a1cfe5d90a59cda0416&ipo=images";
+  image = "/Background1.png";
 }
