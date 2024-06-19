@@ -4,14 +4,14 @@
   </button>
   <div class="horizontal space-between">
     <p>Farbgebung</p>
-    <p><a href="">Hell</a>|<a href="" class="active">Dunkel</a></p>
+    <p><a href="#" (click)="setMode('light')" [class.active]="currentMode === 'light'">Hell</a>|<a href="#" (click)="setMode('dark')" [class.active]="currentMode === 'dark'">Dunkel</a></p>
   </div>
   <button>
     Impressum
   </button>
   <div>
     <div class="impress">
-      <!--Mit Hilfe von ChatGPT generiert-->
+      <!--Von ChatGPT generiert-->
       <h2>Angaben gemäß § 5 TMG</h2>
 
       <p>
@@ -41,7 +41,7 @@
         E-Mail <a href="mailto:@hsrw.org">&#64;hsrw.org</a><br><br>
         <strong>Timo</strong><br>
         E-Mail <a href="mailto:@hsrw.org">&#64;hsrw.org</a><br><br>
-        <strong>Tom</strong><br>
+        <strong>Tom Walter</strong><br>
         E-Mail <a href="mailto:@hsrw.org">&#64;hsrw.org</a><br><br>
         <strong>Leo</strong><br>
         E-Mail <a href="mailto:@hsrw.org">&#64;hsrw.org</a><br><br>
