@@ -21,6 +21,8 @@ import { NotFoundComponent } from '../not-found/not-found.component';
 })
 export class ShopLandingPageComponent {
 
+  hasQueryParam:boolean = true;
+
   plants:Plant[] = [];
   constructor(private plantService:PlantService, activatedRoute:ActivatedRoute){
     activatedRoute.params.subscribe((params) => {
@@ -33,4 +35,3 @@ export class ShopLandingPageComponent {
   }
 
 }
-

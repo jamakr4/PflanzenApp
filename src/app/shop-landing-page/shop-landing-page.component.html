@@ -11,27 +11,29 @@
 </div>
 
 
-
-<h4>Shop our bestsellers</h4>
-
-<div class="wrapper"> <!--Horizotal Scrollbar for Bestsellers-->
-    <ng-container *ngFor="let item of plants">
-        <div class="item" *ngIf="item.bestseller">
-            <li>
-                <a routerLink="/details/{{item.id}}">
-                    <img [src] = "item.imageUrl[0]"/>
-                </a>
-                <div class="content">
-                    <div class="name">
-                        {{item.name}} <br>
-                        {{item.price | currency}} <br>
-                        {{item.rating}}
+<div [ngClass]="{'disabled': hasQueryParam}">
+    <h4>Shop our bestsellers</h4>
+  
+    <div class="wrapper"> <ng-container *ngFor="let item of plants">
+            <div class="item" *ngIf="item.bestseller">
+                <li>
+                    <a routerLink="/details/{{item.id}}">
+                        <img [src] = "item.imageUrl[0]"/>
+                    </a>
+                    <div class="content">
+                        <div class="name">
+                            {{item.name}} <br>
+                            {{item.price | currency}} <br>
+                            {{item.rating}}
+                        </div>
                     </div>
-                </div>
-            </li>
-        </div>
-    </ng-container>
+                </li>
+            </div>
+        </ng-container>
+    </div>
 </div>
+ 
+  
 
 
 
