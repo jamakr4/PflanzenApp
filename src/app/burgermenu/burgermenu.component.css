@@ -1,35 +1,66 @@
-
-button {
+div {
   width: 90vw;
 }
 
-div {
+button {
+  flex: 100%;
+  width: 100%;
+  margin-bottom: 1vh;
+}
+
+div div {
   background: var(--secondary-color);
   padding: 2vh;
   border-radius: 2vh;
-  width: 85vw;
-  margin-left: 5vw;
-  margin-right: 5vw;
-}
-
-table {
   width: 100%;
+  max-width: 100%;
+  margin-bottom: 2vh;
 }
 
-tr {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+a {
+  margin: 0 2vh;
+  text-decoration: none;
+  color: var(--text-color);
 }
 
-td {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-span.active {
+a.active {
   color: var(--text-highlight-color);
+}
+
+div h2 {
+  margin: 1vh 0;
+  max-width: 100%;
+}
+
+div p {
+  max-width: 100%;
+}
+
+div div.impress {
+  background: none;
+  border-radius: 0;
+  padding: 0 0;
+  height: 45vh;
+  overflow-y: scroll;
+  width: 100%;
+}
+
+
+@media (min-aspect-ratio: 1/1) {
+  ::-webkit-scrollbar {
+    width: 1vh;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: none;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 2vh;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color);
+  }
 }
