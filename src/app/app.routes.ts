@@ -5,6 +5,9 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { ProfilComponent } from './profil/profil.component';
 import { BurgermenuComponent } from './burgermenu/burgermenu.component';
+import { DiaryChangeComponent } from './diary-change/diary-change.component';
+import { DiaryIndexComponent} from './diary-index/diary-index.component';
+import { DiaryInputComponent } from './diary-input/diary-input.component';
 import { RouterLink } from '@angular/router';
 import { RouterOutlet } from '@angular/router';
 
@@ -35,5 +38,15 @@ export const routes: Routes = [
     },
     {
         path:"menu", component:BurgermenuComponent
+    },
+    {
+        path:"diary-change-component/:id" , component:DiaryChangeComponent
+    },
+    {
+        path:"diary-input-component", component: DiaryInputComponent
+    },
+    {
+
+        path:"diary-index-component", component: DiaryIndexComponent
     }
 ];
