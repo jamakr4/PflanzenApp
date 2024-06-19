@@ -10,11 +10,19 @@ import { HeaderComponent } from './header/header.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,ShopLandingPageComponent,PlantDetailShopPageComponent,RouterLink,TaskbarComponent,BackgroundimageComponent,HeaderComponent],
+  imports: [
+    RouterOutlet,
+    ShopLandingPageComponent,
+    PlantDetailShopPageComponent,
+    RouterLink,
+    TaskbarComponent,
+    BackgroundimageComponent,
+    HeaderComponent,
+  ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
-export class AppComponentimplements OnInit{
+export class AppComponent implements OnInit {
   currentMode: 'light' | 'dark' = 'light';
 
   ngOnInit(): void {

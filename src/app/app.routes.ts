@@ -4,6 +4,7 @@ import { ShopLandingPageComponent } from './shop-landing-page/shop-landing-page.
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { ProfilComponent } from './profil/profil.component';
+import { BurgermenuComponent } from './burgermenu/burgermenu.component';
 import { RouterLink } from '@angular/router';
 import { RouterOutlet } from '@angular/router';
 
@@ -31,5 +32,8 @@ export const routes: Routes = [
     },
     {
         path:"profil", component:ProfilComponent
+    },
+    {
+        path:"menu", component:BurgermenuComponent
     }
 ];
