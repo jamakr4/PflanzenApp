@@ -11,19 +11,13 @@ header {
   color: var(--text-color);
 }
 
-div {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 70%;
-}
-
 p {
   font-size: 4vh;
   padding: 0;
-  max-width: 60vw;
+  max-width: 80vw;
   text-wrap: nowrap;
   overflow-x: hidden;
+  margin: 0;
 }
 
 button {
