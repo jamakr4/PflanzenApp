@@ -1,69 +1,84 @@
-header 
-{
+header {
     position: relative;
-    background: grey;
     padding: 0;
-    
-    border-radius: 5px;
-    height: 4rem;
-    
-}  
 
-a
-{
+    border-radius: 5px;
+    height: 5vh;
+    width: 100vw;
+    display: flex;
+
+    padding: 2vh;
+    margin-bottom: 6vh;
+}
+
+a {
     color: red;
     text-decoration: none;
 }
 
-a:hover{
+a:hover {
     background: blue;
     color: white;
     cursor: pointer;
 }
 
-.container
-{
+.container {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
 }
-ul
-{
+
+ul {
     display: flex;
     list-style-type: none;
     margin: 0;
+    margin-right: 5vw;
 }
-ul a
-{
-    padding: 1rem;
+
+ul a {
+    padding: 0;
     display: inline-block;
 }
 
 /* BackButton */
-#back
-{
+#back {
     border-radius: 100%;
+    padding: 0;
     border: none;
-    background-color: white;
+    background: none;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 900;
+    font-size: 4vh;
+    margin: 0;
+    margin-left: 5vw;
+    text-shadow: 0 0 1vh black;
 }
 
 /* Searchbar Styling */
-#search
-{
- border-radius:10rem 0 0 10rem;
- border: none;
- height: 2rem;
- width: 10rem;
- background-color: white;
- font-size: 1rem;
- font-weight: 500;
- outline: none;
+#search {
+    border-radius: 10rem 0 0 10rem;
+    border: none;
+    height: 4vh;
+    width: 100%;
+    background-color: white;
+    font-size: 2vh;
+    font-weight: 500;
+    outline: none;
+    padding: 0 1vh;
 }
 
-#sb
-{
-    color: darkgreen;
-    height: 2rem;
+form {
+    box-shadow: 0 0.5vh 1vh black;
+    border-radius: 2vh;
+    max-width: 75vw;
+}
+
+#sb {
+    /*color: darkgreen;
     width: 4rem;
     font-size: 1rem;
     border-radius: 0 10rem 10rem 0;
@@ -72,5 +87,17 @@ ul a
     color: white;
     background-color: darkgreen;
     opacity: 0.8;
-    outline: none;
+    outline: none;*/
+    background: var(--primary-color);
+    height: 4vh;
+    font-size: 2vh;
+    display: flex;
+    padding: 0 1vh;
+    border-radius: 0 2vh 2vh 0;
+    align-items: center;
+    justify-content: center;
+}
+
+#sb:hover {
+    background: var(--primary-hover-color);
 }
