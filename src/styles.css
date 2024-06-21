@@ -83,10 +83,6 @@ button.error {
   flex-wrap: wrap;
 }
 
-.scroll {
-  overflow-x: scroll;
-}
-
 .horizontal-scroll {
   width: 100%;
   overflow-x: scroll;
