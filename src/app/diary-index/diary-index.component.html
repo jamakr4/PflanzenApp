@@ -1,0 +1,30 @@
+
+
+<select [(ngModel)]="selectedPlant" (change)="filterEntries()">
+    <option value="alle">Alle Pflanzen</option>
+    <option *ngFor="let plant of plantOptions" [value]="plant">{{ plant }}</option>
+  </select>
+    
+    <button [routerLink]="['/diary-input-component']" class ="add">Add Entry</button>
+
+
+    
+ 
+
+<div  *ngIf="filteredEntries.length > 0; else noEntries">
+  
+    <li class="dynamic-div"  *ngFor="let entry of filteredEntries">
+      
+      <h1>{{ entry.header }}</h1>
+      <p class="plant-text">Pflanze: {{ entry.pflanze }}</p>
+      <p>{{ entry.text }}</p>
+      <button (click)="confirmDelete(entry)" class="delete-icon">X</button>
+      <button [routerLink]="['/diary-change-component', entry.id]" class="edit-icon">&#9998;</button>
+    </li>
+  
+</div>
+
+<ng-template #noEntries>
+  <p>Keine Einträge gefunden.</p>
+</ng-template>
+

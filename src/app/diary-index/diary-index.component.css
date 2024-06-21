@@ -1,0 +1,84 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #090D05;
+    color: white;
+}
+
+.dynamic-div {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px;
+    width: 300px;
+    position: relative;
+    border-radius:10px;
+    color: white;
+    background-color: #2F2F2F;
+    list-style-type: none;
+    left:-15px;
+}
+
+.dynamic-div h1 {
+    text-align: center;
+    font-size: 24px;
+    margin: 0 0 10px 0;
+    border-radius:10px;
+}
+
+.dynamic-div p {
+    font-size: 18px;
+    margin: 0;
+    border-radius:10px;
+}
+
+.dynamic-div img {
+    width: 100%;
+    margin-top: 10px;
+    border-radius:10px;
+}
+
+.delete-icon {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    color: red;
+    font-size: 20px;
+    background: none;
+    border: none;
+}
+
+.edit-icon {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    cursor: pointer;
+    color: green;
+    font-size: 20px;
+    background: none;
+    border: none;
+}
+
+.plant-text {
+    text-decoration: underline;
+    margin-top: 10px;
+}
+
+.add {
+    margin: 2vh;
+    margin-left: 29.5vh;
+}
+
+.filter {
+    position: absolute;
+    left: 85vh;
+}
+
+.dropdown-container {
+    top: 15vh;
+    position: absolute;
+    left: 2vh;
+}
