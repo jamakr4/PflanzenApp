@@ -19,26 +19,26 @@ export const sample_quote: Quote[] = [
     },
     {
         text: "Plant seeds of happiness, hope, success, and love; it will all come back to you in abundance.",
-        imageUrl: "/quote5.png",
+        imageUrl: "/quote1.png",
     },
     {
         text: "The earth laughs in flowers.",
-        imageUrl: "/quote6.png",
+        imageUrl: "/quote2.png",
     },
     {
         text: "Gardening adds years to your life and life to your years.",
-        imageUrl: "/quote7.png",
+        imageUrl: "/quote3.png",
     },
     {
         text: "A garden is a friend you can visit anytime.",
-        imageUrl: "/quote8.png",
+        imageUrl: "/quote4.png",
     },
     {
         text: "He who plants a tree plants a hope.",
-        imageUrl: "/quote9.png",
+        imageUrl: "/quote1.png",
     },
     {
         text: "Gardens are not made by singing ‘Oh, how beautiful,’ and sitting in the shade.",
-        imageUrl: "/quote10.png",
+        imageUrl: "/quote2.png",
     }
 ];

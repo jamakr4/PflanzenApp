@@ -41,4 +41,6 @@ export class AppComponent implements OnInit {
     document.body.classList.remove('light-mode', 'dark-mode');
     document.body.classList.add(`${this.currentMode}-mode`);
   }
+
+  title = "PflanzenApp";
 }

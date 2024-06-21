@@ -2,33 +2,25 @@
     <app-shopheader></app-shopheader>
 </header>
 
-<app-not-found 
-[visible]="!plants || !plants.length"
-></app-not-found>
+<app-not-found [visible]="!plants || !plants.length"></app-not-found>
 
-<div id="carousel"> 
-   
+<div id="carousel">
+
 </div>
-
-
 
 <h4>Shop our bestsellers</h4>
 
-<div class="wrapper"> <!--Horizotal Scrollbar for Bestsellers-->
-    <ng-container *ngFor="let item of plants">
+<div class="wrapper horizontal"> <!--Horizotal Scrollbar for Bestsellers-->
+    <ng-container *ngFor="let item of plants" class="horizontal horizontal-scroll">
         <div class="item" *ngIf="item.bestseller">
-            <li>
-                <a routerLink="/details/{{item.id}}">
-                    <img [src] = "item.imageUrl[0]"/>
-                </a>
-                <div class="content">
-                    <div class="name">
-                        {{item.name}} <br>
-                        {{item.price | currency}} <br>
-                        {{item.rating}}
-                    </div>
+            <a routerLink="/details/{{item.id}}" class="vertical space-between">
+                <img [src]="item.imageUrl[0]" />
+                <div class="content horizontal">
+                    <p><strong>{{item.name}}</strong> </p>
+                    <i class="fa-solid fa-sack-dollar"></i> <span>{{item.price | currency}} <br>
+                    <i class="fa-solid fa-star"></i> {{item.rating}}</span>
                 </div>
-            </li>
+            </a>
         </div>
     </ng-container>
 </div>
@@ -41,7 +33,7 @@
 <ul>
     <li *ngFor="let p of plants">
         <a routerLink="/details/{{p.id}}">
-            <img [src] = "p.imageUrl[0]"/>
+            <img [src]="p.imageUrl[0]" />
         </a>
         <div class="content">
             <div class="name">

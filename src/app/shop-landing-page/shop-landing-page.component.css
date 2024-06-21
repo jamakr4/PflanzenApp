@@ -2,18 +2,16 @@
 
 
 /* sonstiges*/
-ul
-{
+ul {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    list-style-type:none;
+    list-style-type: none;
     padding: 0;
 }
 
-li a
-{
+li a {
     height: 12.5rem;
     width: 10rem;
     border: 1px solid violet;
@@ -25,20 +23,17 @@ li a
     color: darkolivegreen;
 }
 
-li a:hover
-{
+li a:hover {
     opacity: 0.9;
     cursor: pointer;
 }
 
-li a img
-{
+li a img {
     object-fit: cover;
     height: 14.5rem;
 }
 
-.content
-{
+.content {
     margin-top: 0.3rem;
     margin-left: 1rem;
     padding: 0.5r 1rem;
@@ -46,44 +41,94 @@ li a img
     height: auto;
     width: 9rem;
     background-color: grey;
-    
-    
+
+
 }
 
 .sidescrollbar {
     display: flex;
     overflow-x: auto;
     white-space: nowrap;
-    width: 100%; /* or any desired width */
+    width: 100%;
+    /* or any desired width */
     background-color: black;
 }
 
 
 .wrapper {
-    display: flex;
-    overflow-x: auto;
-    overflow-y: hidden;  
-    white-space: nowrap; 
-    border: 1px solid aqua; 
-    padding: 0.5rem; 
-    margin: 0.5rem; 
-    height: 15rem;
-    }
-    
-    .wrapper .item {
-        width: 10rem;
-        height: 14.5rem;
-        line-height: 110px;
-        background-color: blue;
-        margin-right: 1px;
-        border-radius: 1rem; 
-        display: flex; 
-        justify-content: center;     
-        align-items: center; 
-        color: darkolivegreen; 
-        cursor: pointer; 
-    }
-    
-    .wrapper .item:hover {
-        background-color: lightblue;
-    }
+    overflow-y: hidden;
+    width: 95vw;
+    max-width: 95vw;
+    margin-left: 5vw;
+    height: 25vh;
+    justify-content: left;
+}
+
+.wrapper .item {
+    width: 125px;
+    min-width: 125px;
+    height: 25vh;
+    background-color: white;
+    border-radius: 2vh;
+    cursor: pointer;
+    margin: 1vh;
+    overflow: hidden;
+    font-size: 2vh;
+}
+
+
+
+h4 {
+    margin-left: 5vw;
+}
+
+.wrapper .item a {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper .item a img {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: auto;
+    height: 60%;
+    contain: content;
+    margin-bottom: -4vh;
+}
+
+.wrapper .item a .content {
+    position: absolute;
+    top: 60%;
+    margin-bottom: 0;
+    max-height: 10vh;
+    width: 100%;
+    font-size: 2vh;
+    color: var(--text-color);
+    z-index: 10;
+    display: block;
+    width: 100%;
+    background: none;
+    text-decoration: none;
+    position: relative;
+    bottom: 0;
+    background: var(--secondary-color);
+    margin: 0;
+    border: none;
+    padding: 1vh;
+    line-height: 1;
+}
+
+.wrapper .item a .content p {
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    min-width: 100px;
+    width: 100px;
+    padding-bottom: 1vh;
+}
