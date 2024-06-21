@@ -1,0 +1,32 @@
+div {
+  width: 90vw;
+}
+
+div div {
+  padding: 2vh;
+  border-radius: 2vh;
+  margin-bottom: 1vh;
+}
+
+.weather {
+  box-shadow: 0 0.5vh 1vh black;
+  background: var(--primary-color);
+  flex: 100%;
+  height: 20vh;
+}
+
+.quote {
+  background: var(--primary-color);
+}
+
+
+.board {
+  height: 35vh;
+  background: var(--secondary-color);
+}
+
+h1 {
+  margin-bottom: 1vh;
+  font-size: 2.5vh;
+  text-align: justify;
+}

@@ -1,18 +1,18 @@
 <header>
-  <div class="container">
+  <div class="horizontal space-between">
 
-      <input id="back" type="button" value=" ← " onclick="history.back()"> <!--BackButton-->
+    <input id="back" type="button" value="←" onclick="history.back()"> <!--BackButton-->
 
-      <form class="search-form"> <!--Searchbar-->
-          <input #s id="search" type="text" placeholder="Search" (keyup.enter)="search(s.value)" [value]="searchTerm"/>
-          <button id="sb" (click)="search(s.value)">Search</button>
-        </form>
-        
-          <ul>
-              <li>
-                  <a routerLink="/shoppingcart"> <!--ShoppingCart-->
-                  Cart</a>
-              </li>
-          </ul>
+    <form class="search-form horizontal"> <!--Searchbar-->
+      <input #s id="search" type="text" placeholder="Search" (keyup.enter)="search(s.value)" [value]="searchTerm" />
+      <button id="sb" (click)="search(s.value)"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </form>
+
+    <ul>
+      <li>
+        <a routerLink="/shoppingcart"> <!--ShoppingCart-->
+          <i class="fa-solid fa-cart-shopping"></i></a>
+      </li>
+    </ul>
   </div>
 </header>
