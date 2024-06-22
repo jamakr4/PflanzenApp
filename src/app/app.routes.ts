@@ -8,6 +8,7 @@ import { BurgermenuComponent } from './burgermenu/burgermenu.component';
 import { DiaryChangeComponent } from './diary-change/diary-change.component';
 import { DiaryIndexComponent} from './diary-index/diary-index.component';
 import { DiaryInputComponent } from './diary-input/diary-input.component';
+import { MyPlantsComponent } from './myplants/myplants.component';
 import { RouterLink } from '@angular/router';
 import { RouterOutlet } from '@angular/router';
 
@@ -48,5 +49,8 @@ export const routes: Routes = [
     {
 
         path:"diary-index-component", component: DiaryIndexComponent
+    },
+    {
+        path:"myplants", component:MyPlantsComponent
     }
 ];
