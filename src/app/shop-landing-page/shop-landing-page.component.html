@@ -8,39 +8,39 @@
 
 </div>
 
-<h4>Shop our bestsellers</h4>
-
-<div class="wrapper horizontal"> <!--Horizotal Scrollbar for Bestsellers-->
-    <ng-container *ngFor="let item of plants" class="horizontal horizontal-scroll">
-        <div class="item" *ngIf="item.bestseller">
-            <a routerLink="/details/{{item.id}}" class="vertical space-between">
-                <img [src]="item.imageUrl[0]" />
-                <div class="content horizontal">
-                    <p><strong>{{item.name}}</strong> </p>
-                    <i class="fa-solid fa-sack-dollar"></i> <span>{{item.price | currency}} <br>
-                    <i class="fa-solid fa-star"></i> {{item.rating}}</span>
+<div id="shopcontent">
+    <h4>Shop our bestsellers</h4>
+    
+    <div class="wrapper horizontal"> <!--Horizotal Scrollbar for Bestsellers-->
+        <ng-container *ngFor="let item of plants" class="horizontal horizontal-scroll">
+            <div class="item" *ngIf="item.bestseller">
+                <a routerLink="/details/{{item.id}}" class="vertical space-between">
+                    <img [src]="item.imageUrl[0]" />
+                    <div class="content horizontal">
+                        <p><strong>{{item.name}}</strong> </p>
+                        <i class="fa-solid fa-sack-dollar"></i> <span>{{item.price | currency}} <br>
+                            <i class="fa-solid fa-star"></i> {{item.rating}}</span>
+                    </div>
+                </a>
+            </div>
+        </ng-container>
+    </div>
+    
+    
+    
+    
+    
+    <!--Alle Items einfügen -->
+    <ul class="every-option">
+        <li *ngFor="let p of plants">
+            <a routerLink="/details/{{p.id}}">
+                <img [src]="p.imageUrl[0]" />
+                <div class="content">
+                    <p>{{p.name}}</p>
+                    <i class="fa-solid fa-sack-dollar"></i>  {{p.price | currency}} <br>
+                    <i class="fa-solid fa-star"></i> {{p.rating}}
                 </div>
             </a>
-        </div>
-    </ng-container>
+        </li>
+    </ul>
 </div>
-
-
-
-
-
-<!--Alle Items einfügen -->
-<ul>
-    <li *ngFor="let p of plants">
-        <a routerLink="/details/{{p.id}}">
-            <img [src]="p.imageUrl[0]" />
-        </a>
-        <div class="content">
-            <div class="name">
-                {{p.name}} <br>
-                {{p.price | currency}} <br>
-                {{p.rating}}
-            </div>
-        </div>
-    </li>
-</ul>

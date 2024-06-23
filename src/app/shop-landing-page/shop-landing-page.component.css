@@ -132,3 +132,75 @@ h4 {
     width: 100px;
     padding-bottom: 1vh;
 }
+
+.every-option {
+    padding: 0 5vw;
+    margin-top: 2vh;
+}
+
+.every-option li {
+    margin: 0;
+}
+
+.every-option li a {
+    width: 100px;
+    position: relative;
+    height:fit-content;
+    padding: 0;
+    background: var(--secondary-color);
+    border: none;
+    color: var(--text-color);
+}
+
+.every-option li a img {
+    min-height: 15vh;
+    height: 15vh;
+    max-height: 15vh;
+}
+
+.every-option li a .content {
+    width: 100%;
+    padding: 1vh;
+    margin: 0;
+    background: var(--primary-color);
+    border: none;
+    color: var(--text-color);
+}
+
+.every-option li a .content p {
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 100%;
+    padding-bottom: 1vh;
+}
+
+#shopcontent {
+    max-height: 70vh;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding-bottom: 6vh;
+}
+
+
+@media (min-aspect-ratio: 1/1) {
+    ::-webkit-scrollbar {
+        width: 1vh;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: none;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: var(--primary-color);
+        border-radius: 2vh;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: var(--primary-color);
+    }
+}
