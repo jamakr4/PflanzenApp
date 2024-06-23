@@ -1,14 +1,35 @@
-import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
-
-
+import { Component,OnInit } from '@angular/core';
+import { Location } from '@angular/common';
+import { Router, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs/operators';
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [RouterLink],
+  imports: [],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
-export class HeaderComponent {
-  headerTitle = "Pflanzen App";
+export class HeaderComponent implements OnInit {
+  headerTitle = "";
+  constructor(private location: Location, private router: Router) { }
+
+  ngOnInit() {
+    let path = this.location.path();
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe(() => {
+      let path = this.location.path();
+      switch (path) {
+        case "/shop":
+          this.headerTitle = "Pflanzen Shop";
+          break;
+          case "/profil":
+            this.headerTitle = "Ihr Profil";
+            break;
+        default:
+          this.headerTitle = "Pflanzen App";
+          break;
+      }
+    });
+  }
 }
