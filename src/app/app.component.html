@@ -1,7 +1,7 @@
-<app-backgroundimage></app-backgroundimage>
-
-<app-header></app-header>
-
-<app-taskbar></app-taskbar>
+<ng-container *ngIf= "!isAuthPage()">
+    <app-backgroundimage></app-backgroundimage>
+    <app-header></app-header>
+    <app-taskbar></app-taskbar>
+</ng-container>
 
 <router-outlet />
