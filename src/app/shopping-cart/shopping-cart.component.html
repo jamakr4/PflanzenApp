@@ -2,47 +2,37 @@
     <app-shopheader></app-shopheader>
 </header>
 
-<app-not-found 
-    [visible]="!cart || !cart.items.length"
-    notFoundMessage="Your Cart is Empty"
-    ></app-not-found>
+<app-not-found [visible]="!cart || !cart.items.length" notFoundMessage="Your Cart is Empty"></app-not-found>
 
-<div class="container">
+<div class="container" *ngIf="cart.items.length > 0">
+
     <ul>
         <li *ngFor="let c of cart.items">
-            <div>
+            <div class="infoOfArticle">
                 <a routerLink="/details/{{ c.plant.id }}">
                     <img [src]="c.plant.imageUrl[0]" alt="Plant Image">
-                  </a>
-            </div>
-            <div>
-                <a routerLink="/details/{{c.plant.id}}">
-                    {{c.plant.name}}
                 </a>
-            </div>
-            <div>
-                <select #quantitySelection
-                [value]="c.quantity"
-                (change)="changeQuantity(c, quantitySelection.value)">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-            </select>
-            </div>
-            <div>
-                {{c.price | currency}}
-            </div>
-            <div>
-                <button class="remove" (click)="removeFromCart(c)">remove</button>
+                <div>
+                    <a routerLink="/details/{{ c.plant.id }}">{{c.plant.name}}</a>
+                    <div class="plant-options">{{c.price | currency}}
+                        <select #quantitySelection [value]="c.quantity"
+                            (change)="changeQuantity(c, quantitySelection.value)">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                        <button class="remove" (click)="removeFromCart(c)"><i class="fa-solid fa-trash"></i>
+                            remove</button>
+                    </div>
+                </div>
             </div>
         </li>
     </ul>
     <div class="checkout">
         <div>
-            <div class="plantCount">{{cart.totalCount}}</div>
-            <div class="totalPrice">{{cart.totalPrice | currency}}</div>
+            {{cart.totalCount}} Produkte für {{cart.totalPrice | currency}}
         </div>
 
         <a id="checkout" routerLink="/checkout">Proceed to Checkout</a>
