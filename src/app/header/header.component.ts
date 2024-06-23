@@ -1,11 +1,11 @@
 import { Component,OnInit } from '@angular/core';
 import { Location } from '@angular/common';
-import { Router, NavigationEnd } from '@angular/router';
+import { Router, NavigationEnd, RouterLink } from '@angular/router';
 import { filter } from 'rxjs/operators';
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
@@ -26,6 +26,9 @@ export class HeaderComponent implements OnInit {
           case "/profil":
             this.headerTitle = "Ihr Profil";
             break;
+            case "/menu":
+              this.headerTitle = "Weiteres";
+              break;
         default:
           this.headerTitle = "Pflanzen App";
           break;
