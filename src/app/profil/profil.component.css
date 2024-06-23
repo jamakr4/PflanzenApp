@@ -1,0 +1,12 @@
+.grid-container{
+    display: grid;
+    grid-template-columns: 185px 185px;
+    gap: 5px;
+}
+
+.flex-text{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}

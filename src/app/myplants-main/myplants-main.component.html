@@ -1,0 +1,28 @@
+<p id="reminder">Als nächstes gießen:</p>
+<div id="reminderPflanzen"></div>
+<div>
+    <button>Neue Pflanze hinzufügen</button>
+    <a routerLink="/diary-index-component"><button>Pflanzentagebuch</button></a>
+</div>
+<div id="filter">Filtern nach:</div>
+<div id="pflanzensammlung">test</div>
+
+
+<div class="container">
+    <p>Alle deine Pflanzen</p>
+    <div class="scroll-list">
+      <ul>
+        <li *ngFor="let p of plants">
+          <a>
+            <img [src]="p.imageUrl[0]" alt="{{ p.name }}" />
+          </a>
+          <div class="content">
+            <div class="name">
+               {{ p.name }} <br>
+              
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>

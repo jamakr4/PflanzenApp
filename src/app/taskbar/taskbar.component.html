@@ -1,8 +1,9 @@
 <div>
-  <a routerLink="/home"><button class="active"><i class="fa-solid fa-house"></i></button></a>
-  <a routerLink="/shop"><button class="active"><i class="fa-solid fa-cart-shopping"></i></button></a>
+  <a routerLink="/home"><button [class.active]="pageLink == 'home'"><i class="fa-solid fa-house"></i></button></a>
+  <a routerLink="/shop"><button [class.active]="pageLink == 'shop'"><i class="fa-solid fa-cart-shopping"></i></button></a>
 
-  <button><i class="fa-solid fa-seedling"></i></button>
 
-  <a routerLink="/profil"><button class="active"><i class="fa-solid fa-user"></i></button></a>
+  <a routerLink="/myplants"><button [class.active]="pageLink == 'myplants'"><i class="fa-solid fa-seedling"></i></button></a>
+
+  <a routerLink="/profil"><button [class.active]="pageLink == 'profil'"><i class="fa-solid fa-user"></i></button></a>
 </div>

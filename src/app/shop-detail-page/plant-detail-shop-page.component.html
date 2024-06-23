@@ -1,47 +1,35 @@
-
 <header>
     <app-shopheader></app-shopheader>
 </header>
 
 <div class="container">
-
-     <div class="rating">{{plant.rating}}</div>
-
-
-    <div class="img">
+    <div class="left">
         <img [src]="plant.imageUrl[0]">
+        <div class="info">
+            <h2>{{plant.name}}</h2>
+            <li>Wissenschaftlicher Name: 
+                <br>{{plant.scientificName}}</li>
+            <li><i class="fa-solid fa-sack-dollar"></i> {{plant.price}}€</li>
+            <div class="rating"><i class="fa-solid fa-star"></i> {{plant.rating}}</div>
+        </div>
+
     </div>
+    <div class="right">
+        <div class="about">
+            <h4><i class="fa-solid fa-circle-info"></i> Weitere Informationen</h4>
+            <p *ngIf="plant.description.length > 0">{{plant.description}}</p>
+            <ul>
+                <li *ngIf="plant.water != null"><i class="fa-solid fa-droplet"></i> {{plant.water}} Milliliter Wasser pro Tag</li>
+                <li *ngIf="plant.temperature != null"><i class="fa-solid fa-temperature-quarter"></i> {{plant.temperature}}°C</li>
+                <li *ngIf="plant.sunlight.length > 0"><i class="fa-solid fa-cloud-sun"></i> {{plant.sunlight}}</li>
+                <li *ngIf="plant.humidity.length > 0"><i class="fa-solid fa-wind"></i> {{plant.humidity}}</li>
+                <li *ngIf="plant.toughness.length > 0"><i class="fa-solid fa-shield"></i> Resistenzstufe {{plant.toughness}}</li>
+                <li *ngIf="plant.indoor"><i class="fa-solid fa-plant-wilt"></i> Hauspflanze</li>
+                <li *ngIf="plant.outdoor"><i class="fa-solid fa-sun-plant-wilt"></i> Freilandgewächs</li>
+                <li *ngIf="plant.tips.length > 0"><i class="fa-solid fa-triangle-exclamation"></i> {{plant.tips}}</li>
+            </ul>
+        </div>
 
-
-
-    
-    <ul>
-        <li>{{plant.name}}</li>
-        <li>{{plant.scientificName}}</li>
-        <li>{{plant.price}}</li>
-    </ul>
-    
-
-    
-    test
-
+        <button (click)="addToCart()" id="addToCart"><i class="fa-solid fa-cart-plus"></i> Add to cart</button> <span> Amount Adjustment</span>
+    </div>
 </div>
-
-<button (click)="addToCart()" id="addToCart">Add to cart</button> <span>Amount Adjustment</span>
-
-<!--Details zur Pflanze - Dropdownmenu?-->
-<h4>About</h4>
-<ul>
-<li>{{plant.water}}</li>
-<li>{{plant.temperature}}</li>
-<li>{{plant.sunlight}}</li>
-<li>{{plant.humidity}}</li>
-<li>{{plant.temperature}}</li>
-<li>{{plant.toughness}}</li>
-<li>{{plant.indoor}}</li>
-<li>{{plant.outdoor}}</li>
-<li>{{plant.description}}</li>
-<li>{{plant.tips}}</li>
-
-</ul>
-
