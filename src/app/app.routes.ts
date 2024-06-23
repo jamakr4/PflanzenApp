@@ -17,7 +17,7 @@ import { RegistrationComponent } from './registration/registration.component';
 
 export const routes: Routes = [
     {
-        path: "", component: HomePageComponent
+        path: "", component: PreloginComponent
     },
     {
         path: "details/:id", component: PlantDetailShopPageComponent
