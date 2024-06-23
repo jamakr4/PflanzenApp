@@ -8,6 +8,34 @@ body {
     color: white;
 }
 
+select {
+    position:absolute;
+    top: 18vh;
+    background-color: #2F2F2F;
+    color: white;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    cursor: pointer;
+    width: 200px;
+    margin: 10px 0;
+    
+}
+select option {
+    background-color: #2F2F2F;
+    color: white;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-height: 60vh; 
+    overflow-y: auto; 
+}
 .dynamic-div {
     border: 1px solid #ccc;
     padding: 20px;
@@ -68,6 +96,8 @@ body {
 }
 
 .add {
+    border: 1px solid #ccc;
+    border-radius: 5px;
     margin: 2vh;
     margin-left: 29.5vh;
 }
