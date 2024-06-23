@@ -1,0 +1,22 @@
+<header>
+<h1>Als nächstes gießen</h1>
+</header>
+
+<div class="container">
+    
+    <p>All deine Pflanzen</p>
+    <div class="scroll-list">
+    <ul>
+        <li *ngFor="let p of plants">
+            <a>
+                <img [src]="p.imageUrl[0]" alt="{{ p.name }}" />
+            </a>
+            <div class="content">
+                <div class="name">
+                    {{ p.name }} <br>
+                </div>
+            </div>
+        </li>
+    </ul>
+    </div>
+</div>
