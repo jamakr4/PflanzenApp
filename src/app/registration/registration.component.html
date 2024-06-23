@@ -1,7 +1,8 @@
 <div class="background">
+    <a routerLink="/prelogin" class="back"><i class="fa-solid fa-circle-arrow-left"></i></a>
     <div class="flex-container">
         <h1>Willkommen</h1>
-        <h4>Tragen Sie Ihre Daten ein</h4>
+        <h5>Tragen Sie Ihre Daten ein</h5>
         <form action="post">
 
             <input type="text" id="email" name="email" placeholder="Email">
@@ -9,7 +10,7 @@
             <input type="text" id="password" name="password" placeholder="Passwort">
 
             <input type="text" id="rpassword" name="rpassword" placeholder="Passwort wiederholen">
-            <a href="/home" type="button">Absenden</a>
+            <a routerLink="/home" type="button" class="cbutton">Absenden</a>
         </form>
     </div>
 </div>

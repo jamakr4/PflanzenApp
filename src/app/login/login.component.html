@@ -1,12 +1,13 @@
 <div class="background">
+    <a routerLink="/prelogin" class="back"><i class="fa-solid fa-circle-arrow-left"></i></a>
     <div class="flex-container">
         <h1>Logge dich ein</h1>
         <p>Gib deine Email und Passwort ein oder registriere dich neu</p>
         <form action="post">
             <input type="text" id="email" name="email" placeholder="Email">
             <input type="text" id="password" name="password" placeholder="Passwort">
-            <a href="/home" type="button">login</a>
+            <a routerLink="/home" type="button" class="cbutton">Login</a>
         </form>
-        <a href="/registration"><button>Hier registrieren</button></a>
+        <a routerLink="/registration" class="cbutton">Hier registrieren</a>
     </div>
 </div>

@@ -21,6 +21,7 @@ form{
     display: flex;
     flex-direction: column;
     gap: 10px;
+    align-items: center;
 }
 
 input{
@@ -31,4 +32,25 @@ input{
 p{
     font-size: small;
     font-weight: bold;
+}
+
+.cbutton{
+    padding: 2vh;
+    border-radius: 2vh;
+    border: none;
+    background: var(--secondary-color);
+    font-size: 2vh;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.back{
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    font-size: x-large;
+}
+
+h1{
+    font-weight: bolder;
 }
