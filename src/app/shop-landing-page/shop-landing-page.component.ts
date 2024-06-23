@@ -14,22 +14,21 @@ import { NotFoundComponent } from '../not-found/not-found.component';
 @Component({
   selector: 'app-shop-landing-page',
   standalone: true,
-  imports: [ShopheaderComponent,CommonModule,NgIf,RouterLink, RouterOutlet,NotFoundComponent
+  imports: [ShopheaderComponent, CommonModule, NgIf, RouterLink, RouterOutlet, NotFoundComponent
   ],
   templateUrl: './shop-landing-page.component.html',
   styleUrl: './shop-landing-page.component.css'
 })
 export class ShopLandingPageComponent {
 
-  plants:Plant[] = [];
-  constructor(private plantService:PlantService, activatedRoute:ActivatedRoute){
+  plants: Plant[] = [];
+  constructor(private plantService: PlantService, activatedRoute: ActivatedRoute) {
     activatedRoute.params.subscribe((params) => {
-      if(params['searchTerm'])
+      if (params['searchTerm'])
         this.plants = this.plantService.getAllPlantsBySearchTerm(params['searchTerm']);
       else
-      this.plants = plantService.getAll();
+        this.plants = plantService.getAll();
     })
-   
   }
 
 }
