@@ -18,6 +18,12 @@ export class Plant{
     bestseller!: boolean; //For shop cat
     indoor!: boolean;
     outdoor!: boolean;
+    maintenance!: String;
+    expierience!: String;
+    space!: String;
+    purpose!: String;
+    petfriendly!: boolean;
+    allergyfriendly!: boolean;
     imageUrl!: String[];
 
     //For the my Plant Area
