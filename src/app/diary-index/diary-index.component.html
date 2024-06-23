@@ -1,3 +1,5 @@
+
+
 <select [(ngModel)]="selectedPlant" (change)="filterEntries()">
   <option value="alle">Alle Pflanzen</option>
   <option *ngFor="let plant of plantOptions" [value]="plant">{{ plant }}</option>
@@ -9,7 +11,7 @@
 
 
 
-<div *ngIf="filteredEntries.length > 0; else noEntries">
+<div class ="content"*ngIf="filteredEntries.length > 0; else noEntries">
 
   <li class="dynamic-div" *ngFor="let entry of filteredEntries">
 

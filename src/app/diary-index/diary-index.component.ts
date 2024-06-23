@@ -14,7 +14,7 @@ export class DiaryIndexComponent implements OnInit {
   plantOptions: string[] = [];
   selectedPlant: string = 'alle'; 
   filteredEntries: any[] = []; 
-  
+ 
   constructor() { }
 
   ngOnInit(): void {
