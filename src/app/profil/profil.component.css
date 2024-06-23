@@ -8,5 +8,57 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
 
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    overflow: hidden;
+    overflow-x: scroll;
+    margin-left: 5vw;
+    width: 95vw;
+    padding-bottom: 1vh;
+}
+
+.wrapper img {
+    height: 9vh;
+}
+
+.wrapper div {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 2vh;
+    margin-right: 1vh;
+    min-width: 100px;
+    height: 20vh;
+    max-width: 100px;
+    border-radius: 2vh;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.wrapper div .content {
+    background: var(--secondary-color);
+    text-transform: capitalize;
+    border-radius: 0;
+    margin: 0;
+    padding: 1vh;
+    text-align: left;
+    display: block;
+}
+
+.content p {
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    background: var(--secondary-color);
+    margin-bottom: 0;
 }
