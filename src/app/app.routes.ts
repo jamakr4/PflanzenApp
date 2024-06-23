@@ -6,47 +6,46 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { ProfilComponent } from './profil/profil.component';
 import { BurgermenuComponent } from './burgermenu/burgermenu.component';
 import { DiaryChangeComponent } from './diary-change/diary-change.component';
-import { DiaryIndexComponent} from './diary-index/diary-index.component';
+import { DiaryIndexComponent } from './diary-index/diary-index.component';
 import { DiaryInputComponent } from './diary-input/diary-input.component';
 import { RouterLink } from '@angular/router';
 import { RouterOutlet } from '@angular/router';
 
 export const routes: Routes = [
     {
-     path:"", component:ShopLandingPageComponent //testing only remove or replace 
+        path: "", component: HomePageComponent
     },
     {
-        path:"details/:id", component:PlantDetailShopPageComponent
+        path: "details/:id", component: PlantDetailShopPageComponent
     },
     {
-        path:"shop", component:ShopLandingPageComponent
+        path: "shop", component: ShopLandingPageComponent
     },
     {
-        path:"shoppingcart", component:ShoppingCartComponent
+        path: "shoppingcart", component: ShoppingCartComponent
     },
     {
-        path:"search/:searchTerm", component:ShopLandingPageComponent
+        path: "search/:searchTerm", component: ShopLandingPageComponent
     },
     {
-      path:"cart-page", component:ShoppingCartComponent
+        path: "cart-page", component: ShoppingCartComponent
     },
     {
-        path:"home", component:HomePageComponent
+        path: "home", component: HomePageComponent
     },
     {
-        path:"profil", component:ProfilComponent
+        path: "profil", component: ProfilComponent
     },
     {
-        path:"menu", component:BurgermenuComponent
+        path: "menu", component: BurgermenuComponent
     },
     {
-        path:"diary-change-component/:id" , component:DiaryChangeComponent
+        path: "diary-change-component/:id", component: DiaryChangeComponent
     },
     {
-        path:"diary-input-component", component: DiaryInputComponent
+        path: "diary-input-component", component: DiaryInputComponent
     },
     {
-
-        path:"diary-index-component", component: DiaryIndexComponent
+        path: "diary-index-component", component: DiaryIndexComponent
     }
 ];
