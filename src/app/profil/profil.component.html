@@ -18,5 +18,20 @@
         <h3>Eventuell interessant</h3>
         <div>Such Historie</div>
     </div>
-    
+
+    <div class="horizontal wrapper"> <!--Horizotal Scrollbar for Bestsellers-->
+        <ng-container *ngFor="let item of plants">
+            <div class="item" *ngIf="item.bestseller">
+                <a routerLink="/details/{{item.id}}" class="vertical space-between">
+                    <img [src]="item.imageUrl[0]" />
+                    <div class="content horizontal">
+                        <p><strong>{{item.name}}</strong> </p>
+                        <i class="fa-solid fa-sack-dollar"></i> <span>{{item.price | currency}} <br>
+                        <i class="fa-solid fa-star"></i> {{item.rating}}</span>
+                    </div>
+                </a>
+            </div>
+        </ng-container>
+    </div>
+
 </div>
