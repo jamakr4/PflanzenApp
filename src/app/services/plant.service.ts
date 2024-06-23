@@ -14,13 +14,13 @@ export class PlantService {
     return sample_plants;
   }
 
-  getAllPlantsBySearchTerm(searchTerm:string)
+  getAllPlantsBySearchTerm(searchTerm:string): Plant[]
   {
-    return this.getAll().filter(plant => plant.name.toLowerCase().includes(searchTerm.toLowerCase()))
+    return this.getAll().filter(plant => plant.name.toLowerCase().includes(searchTerm.toLowerCase()));
   }
 
   getPlantByID(PlantId: string): Plant {
     const id = Number(PlantId); 
-    return this.getAll().find(Plant => Plant.id === id) ?? new Plant();
+    return this.getAll().find(plant => plant.id === id) ?? new Plant();
   }
 }
