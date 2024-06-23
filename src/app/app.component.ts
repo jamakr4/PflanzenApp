@@ -6,24 +6,35 @@ import { PlantDetailShopPageComponent } from './shop-detail-page/plant-detail-sh
 import { TaskbarComponent } from './taskbar/taskbar.component';
 import { BackgroundimageComponent } from './backgroundimage/backgroundimage.component';
 import { HeaderComponent } from './header/header.component';
+import { Router} from '@angular/router';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
+    NgIf,
     RouterOutlet,
     ShopLandingPageComponent,
     PlantDetailShopPageComponent,
     RouterLink,
     TaskbarComponent,
     BackgroundimageComponent,
-    HeaderComponent,
+    HeaderComponent
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
   currentMode: 'light' | 'dark' = 'light';
+
+  //Überprüfe ob Login-, Register- oder Pre-Login- Seite oder nicht
+  constructor(private router: Router){}
+  isAuthPage(): boolean{
+    return ['/login', '/registration', '/prelogin'].includes(this.router.url);
+  }
+
+  auth = true;
 
   ngOnInit(): void {
     // Initialisiere den Modus aus dem LocalStorage

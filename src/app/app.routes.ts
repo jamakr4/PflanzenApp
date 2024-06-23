@@ -12,6 +12,9 @@ import { MyPlantsComponent } from './myplants/myplants.component';
 import { RouterLink } from '@angular/router';
 import { RouterOutlet } from '@angular/router';
 import { MyplantsMainComponent } from './myplants-main/myplants-main.component';
+import {LoginComponent} from './login/login.component'
+import { PreloginComponent } from './prelogin/prelogin.component';
+import { RegistrationComponent } from './registration/registration.component';
 
 export const routes: Routes = [
     {
@@ -54,5 +57,14 @@ export const routes: Routes = [
     {
         path: "myplants", component: MyplantsMainComponent
 
+    },
+    {
+        path: "login", component: LoginComponent
+    },
+    {
+        path: "prelogin", component: PreloginComponent
+    },
+    {
+        path: "registration", component: RegistrationComponent
     }
 ];
