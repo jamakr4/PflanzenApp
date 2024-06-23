@@ -1,0 +1,34 @@
+.background{
+    background-image: url('/Background1.png');
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.flex-container{
+    display: flex;
+    height: 90%;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input{
+    background-color: transparent;
+    color: white;
+}
+
+p{
+    font-size: small;
+    font-weight: bold;
+}

@@ -31,7 +31,7 @@ export class AppComponent implements OnInit {
   //Überprüfe ob Login-, Register- oder Pre-Login- Seite oder nicht
   constructor(private router: Router){}
   isAuthPage(): boolean{
-    return ['/login', '/registration', '/prelogin'].includes(this.router.url);
+    return ['/login', '/registration', '/prelogin','/'].includes(this.router.url);
   }
 
   auth = true;
