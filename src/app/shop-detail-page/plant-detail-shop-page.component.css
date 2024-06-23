@@ -97,3 +97,22 @@ li {
     height: 6vh;
 }
 
+
+@media (min-aspect-ratio: 1/1) {
+    ::-webkit-scrollbar {
+        width: 1vh;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: none;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: var(--primary-color);
+        border-radius: 2vh;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: var(--primary-color);
+    }
+}
