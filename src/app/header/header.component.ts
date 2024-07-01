@@ -29,6 +29,13 @@ export class HeaderComponent implements OnInit {
             case "/menu":
               this.headerTitle = "Weiteres";
               break;
+              case "/diary-index-component":
+              case "/diary-change-component/:id":
+              case "/diary-input-component":
+              this.headerTitle = "Pflanzentagebuch";
+              break;
+              
+               
         default:
           this.headerTitle = "Pflanzen App";
           break;
