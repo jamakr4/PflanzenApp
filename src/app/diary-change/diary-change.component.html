@@ -1,15 +1,15 @@
 
 <form (ngSubmit)="onSubmit()">
-    <label for="header">Überschrift:</label>
+    <label for="header">Heading:</label>
     <input type="text" id="header" name="header" [(ngModel)]="entry.header">
     
-    <label for="pflanze">Pflanze:</label>
+    <label for="pflanze">Plant:</label>
     <input type="text" id="pflanze" name="pflanze" [(ngModel)]="entry.pflanze">
     
     <label for="text">Text:</label>
     <textarea id="text" name="text" [(ngModel)]="entry.text"></textarea>
     
-    <button  type="submit">Speichern</button>
+    <button  type="submit">Save</button>
   </form>
 
 

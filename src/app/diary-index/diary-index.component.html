@@ -1,5 +1,5 @@
 <select [(ngModel)]="selectedPlant" (change)="filterEntries()">
-  <option value="alle">Alle Pflanzen</option>
+  <option value="alle">All Plants</option>
   <option *ngFor="let plant of plantOptions" [value]="plant">{{ plant }}</option>
 </select>
 
@@ -14,5 +14,5 @@
 </div>
 
 <ng-template #noEntries>
-  <p>Keine Einträge gefunden.</p>
+  <p>No entries found</p>
 </ng-template>

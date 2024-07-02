@@ -18,8 +18,8 @@
                     <img [src]="item.imageUrl[0]" />
                     <div class="content horizontal">
                         <p><strong>{{item.name}}</strong> </p>
-                        <i class="fa-solid fa-sack-dollar"></i> <span>{{item.price | currency}} <br>
-                            <i class="fa-solid fa-star"></i> {{item.rating}}</span>
+                         <span>{{item.price | currency}} <br>
+                             </span>
                     </div>
                 </a>
             </div>
@@ -37,8 +37,8 @@
                 <img [src]="p.imageUrl[0]" />
                 <div class="content">
                     <p>{{p.name}}</p>
-                    <i class="fa-solid fa-sack-dollar"></i>  {{p.price | currency}} <br>
-                    <i class="fa-solid fa-star"></i> {{p.rating}}
+                      {{p.price | currency}} <br>
+                    
                 </div>
             </a>
         </li>

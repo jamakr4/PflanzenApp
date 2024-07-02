@@ -6,11 +6,12 @@ import { ShopheaderComponent } from '../shopheader/shopheader.component';
 import { CartService } from '../services/cart.service';
 import { Router } from '@angular/router';
 import { NgIf } from '@angular/common';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-plant-detail-shop-page',
   standalone: true,
-  imports: [ShopheaderComponent, NgIf
+  imports: [ShopheaderComponent, NgIf, CommonModule
   ],
   templateUrl: './plant-detail-shop-page.component.html',
   styleUrl: './plant-detail-shop-page.component.css'
