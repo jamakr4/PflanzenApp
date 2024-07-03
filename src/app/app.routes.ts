@@ -9,9 +9,10 @@ import { DiaryChangeComponent } from './diary-change/diary-change.component';
 import { DiaryIndexComponent } from './diary-index/diary-index.component';
 import { DiaryInputComponent } from './diary-input/diary-input.component';
 import { RouterLink } from '@angular/router';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { MyplantsMainComponent } from './myplants-main/myplants-main.component';
-import {LoginComponent} from './login/login.component'
+import { MyplantsDetailComponent} from './myplants-detail/myplants-detail.component';
+import { LoginComponent} from './login/login.component'
 import { PreloginComponent } from './prelogin/prelogin.component';
 import { RegistrationComponent } from './registration/registration.component';
 
@@ -56,7 +57,7 @@ export const routes: Routes = [
     {
         path: "myplants", component: MyplantsMainComponent
 
-    },
+    },{ path: "myplants-detail/:id", component: MyplantsDetailComponent},
     {
         path: "login", component: LoginComponent
     },
