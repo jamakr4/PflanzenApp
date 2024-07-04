@@ -1,26 +1,28 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterLink } from '@angular/router';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { ShopLandingPageComponent } from './shop-landing-page/shop-landing-page.component';
 import { PlantDetailShopPageComponent } from './shop-detail-page/plant-detail-shop-page.component';
 import { TaskbarComponent } from './taskbar/taskbar.component';
 import { BackgroundimageComponent } from './backgroundimage/backgroundimage.component';
 import { HeaderComponent } from './header/header.component';
-import { Router} from '@angular/router';
-import { NgIf } from '@angular/common';
+import { QuizLandingPageComponent } from './quiz-landing-page/quiz-landing-page.component';
+import { CommonModule, NgIf } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
     NgIf,
+    CommonModule,
     RouterOutlet,
     ShopLandingPageComponent,
     PlantDetailShopPageComponent,
     RouterLink,
     TaskbarComponent,
     BackgroundimageComponent,
-    HeaderComponent
+    HeaderComponent,
+    QuizLandingPageComponent
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
@@ -28,16 +30,15 @@ import { NgIf } from '@angular/common';
 export class AppComponent implements OnInit {
   currentMode: 'light' | 'dark' = 'light';
 
-  //Überprüfe ob Login-, Register- oder Pre-Login- Seite oder nicht
-  constructor(private router: Router){}
-  isAuthPage(): boolean{
-    return ['/login', '/registration', '/prelogin','/'].includes(this.router.url);
+  constructor(private router: Router) {}
+
+  isAuthPage(): boolean {
+    return ['/login', '/registration', '/prelogin', '/'].includes(this.router.url);
   }
 
   auth = true;
 
   ngOnInit(): void {
-    // Initialisiere den Modus aus dem LocalStorage
     this.currentMode = (localStorage.getItem('colorMode') as 'light' | 'dark') || 'dark';
     this.applyMode();
   }
@@ -53,5 +54,5 @@ export class AppComponent implements OnInit {
     document.body.classList.add(`${this.currentMode}-mode`);
   }
 
-  title = "PflanzenApp";
+  title = 'PflanzenApp';
 }

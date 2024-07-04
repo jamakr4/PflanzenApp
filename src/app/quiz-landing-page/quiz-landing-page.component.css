@@ -1,0 +1,16 @@
+
+.startbutton {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+  }
+  
+  .startbutton:hover {
+    background-color: #45a049;
+  }
+

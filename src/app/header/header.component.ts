@@ -34,6 +34,9 @@ export class HeaderComponent implements OnInit {
               case "/diary-input-component":
               this.headerTitle = "Pflanzentagebuch";
               break;
+                case "/quiz":
+                this.headerTitle = "Pflanzen Quiz";
+                break;
               
                
         default:
