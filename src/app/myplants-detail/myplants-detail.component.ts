@@ -3,20 +3,20 @@ import { PlantService } from '../services/plant.service';
 import { Plant } from '../classes/plants';
 import { ActivatedRoute } from '@angular/router';
 import { NgIf } from '@angular/common';
-
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-myplants-detail',
   standalone: true,
-  imports: [NgIf],
+  imports: [NgIf, RouterLink],
   templateUrl: './myplants-detail.component.html',
-  styleUrl: './myplants-detail.component.css'
+  styleUrls: ['./myplants-detail.component.css']
 })
- export class MyplantsDetailComponent{
-  plant: Plant | undefined; 
+ export class MyplantsDetailComponent implements OnInit{
+  plant: Plant | undefined;
   
   constructor(
-    private route: ActivatedRoute,
+     private route: ActivatedRoute,
     private plantService: PlantService
   ) { }
   ngOnInit(): void {

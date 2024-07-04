@@ -27,11 +27,5 @@ export class PlantService {
   }
 
   getOwnedPlants(): Plant[] {
-    return this.getAll().filter(plant =>this.ownedPlant.includes(plant.id));
-  }
-  getPlantByIdDetail(id: number): Plant | undefined {
-    
-    
-    return sample_plants.find(plant => plant.id ===id);
-}
+    return this.getAll().filter(plant =>this.ownedPlant.includes(plant.id));  }
 }

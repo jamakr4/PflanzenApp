@@ -4,11 +4,12 @@ import { Plant } from '../classes/plants';
 import { PlantService } from '../services/plant.service';
 import { CommonModule } from '@angular/common';
 import { NgIf } from '@angular/common';
-import { RouterModule } from '@angular/router';
+
+
 @Component({
   selector: 'app-myplants-main',
   standalone: true,
-  imports: [RouterLink, NgIf, CommonModule, RouterModule],
+  imports: [RouterLink, NgIf, CommonModule],
   templateUrl: './myplants-main.component.html',
   styleUrl: './myplants-main.component.css'
 })

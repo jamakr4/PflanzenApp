@@ -12,9 +12,11 @@ import { RouterLink } from '@angular/router';
 import { RouterModule } from '@angular/router';
 import { MyplantsMainComponent } from './myplants-main/myplants-main.component';
 import { MyplantsDetailComponent} from './myplants-detail/myplants-detail.component';
+import { MyplantsDescriptionComponent } from './myplants-description/myplants-description.component';
 import { LoginComponent} from './login/login.component'
 import { PreloginComponent } from './prelogin/prelogin.component';
 import { RegistrationComponent } from './registration/registration.component';
+
 
 export const routes: Routes = [
     {
@@ -57,7 +59,14 @@ export const routes: Routes = [
     {
         path: "myplants", component: MyplantsMainComponent
 
-    },{ path: "myplants-detail/:id", component: MyplantsDetailComponent},
+    },
+    {
+        path: "myplants-detail/:id", component: MyplantsDetailComponent
+    },
+    {
+        path:"myplants-description/:id", component: MyplantsDescriptionComponent
+
+    },
     {
         path: "login", component: LoginComponent
     },
