@@ -3,18 +3,20 @@ import { PlantService } from '../services/plant.service';
 import { Plant } from '../classes/plants';
 import { ActivatedRoute  } from '@angular/router';
 import { NgIf } from '@angular/common';
+import { RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
+
 @Component({
   selector: 'app-myplants-description',
   standalone: true,
-  imports: [NgIf],
+  imports: [NgIf,RouterLink],
   templateUrl: './myplants-description.component.html',
   styleUrl: './myplants-description.component.css'
 })
 export class MyplantsDescriptionComponent implements OnInit {
  p: Plant | undefined;
 
- constructor(private router: ActivatedRoute, private plantServices: PlantService) {}
+constructor(private router: ActivatedRoute, private plantServices: PlantService) {}
 
 ngOnInit(): void {
     this.router.params.subscribe(params =>{
