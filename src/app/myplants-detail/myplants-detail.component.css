@@ -1,0 +1,34 @@
+div {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+img {
+    width: 300px;
+    height: 300px;
+    margin-top: 150px;
+    border-radius: 25px;
+}
+.scroll-list{
+
+    overflow-y: auto;
+    margin-top: 0px;
+    max-height: 60vh;
+    display: flex;
+    justify-content: center;
+}
+.kontainer{
+    background-color: rgb(40, 40, 40);
+    width: 20em;
+    border-radius: 20px;
+    text-align: left;
+    
+}
+a{
+    margin-bottom: 20px;
+}
+
+ 

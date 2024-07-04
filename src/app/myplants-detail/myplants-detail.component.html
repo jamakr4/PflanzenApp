@@ -1,0 +1,21 @@
+
+
+<div *ngIf="plant">
+    <h2>{{plant.name}}</h2>
+    <div class ="scroll-list">
+    <img  [src]="plant.imageUrl[0]" alt="{{plant.name}}"/>
+    <div class="kontainer">
+    <p><strong>Scientific Name:</strong> {{ plant.scientificName }}</p>
+  <p><strong>Humidity:</strong> {{ plant.humidity }}</p>
+  <p><strong>Sunlight: </strong>{{plant.sunlight}}</p>
+  <p><strong>Category:</strong> {{ plant.category.join(', ') }}</p>
+  <p><strong>Water Needs:</strong> {{ plant.water }} ml</p>
+  <p><strong>Humidity:</strong> {{ plant.humidity }}</p>
+  <p><strong>Temperature:</strong> {{ plant.temperature }} °C</p>
+  <a [routerLink]="['/myplants-description', plant.id]">More Details</a>
+</div>
+</div>
+
+
+
+

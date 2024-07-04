@@ -7,6 +7,8 @@ import { sample_plants } from '../plantData';
 })
 export class PlantService {
 
+  private ownedPlant: number[] = [1,2,5];
+
   constructor() { }
 
   getAll():Plant[]
@@ -14,13 +16,16 @@ export class PlantService {
     return sample_plants;
   }
 
-  getAllPlantsBySearchTerm(searchTerm:string): Plant[]
+  getAllPlantsBySearchTerm(searchTerm:string)
   {
-    return this.getAll().filter(plant => plant.name.toLowerCase().includes(searchTerm.toLowerCase()));
+    return this.getAll().filter(plant => plant.name.toLowerCase().includes(searchTerm.toLowerCase()))
   }
 
-  getPlantByID(PlantId: string): Plant {
+  getPlantByID(PlantId: string): Plant  {
     const id = Number(PlantId); 
-    return this.getAll().find(plant => plant.id === id) ?? new Plant();
+    return this.getAll().find(Plant => Plant.id === id) ?? new Plant();
   }
+
+  getOwnedPlants(): Plant[] {
+    return this.getAll().filter(plant =>this.ownedPlant.includes(plant.id));  }
 }
