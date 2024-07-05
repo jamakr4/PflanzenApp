@@ -99,8 +99,11 @@ select option {
 .add {
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin: 2vh;
+    margin: 4vh;
     margin-left: 29.5vh;
+    padding: 5px 10px; 
+    width: 12vh; 
+    height: 5.5vh; 
 }
 
 .filter {
