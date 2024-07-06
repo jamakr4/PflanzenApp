@@ -8,9 +8,15 @@
     background-color: brown;
     margin-left: 15rem;
     margin-top: 0rem;
-    height: 6vh;
-    
+    height: 6vh; 
 }
+#addToWishlist{
+    background-color: green;
+    margin-left: 15rem;
+    margin-top: 0rem;
+    height: 6vh; 
+}
+
 img
 {
     border-radius: 2rem;
@@ -37,6 +43,8 @@ img
 
 
 .right {
+
+
     padding-top: 2vh;
 }
 

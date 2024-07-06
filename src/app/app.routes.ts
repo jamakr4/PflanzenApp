@@ -16,6 +16,8 @@ import { MyplantsDescriptionComponent } from './myplants-description/myplants-de
 import { LoginComponent} from './login/login.component'
 import { PreloginComponent } from './prelogin/prelogin.component';
 import { RegistrationComponent } from './registration/registration.component';
+import { WishlistComponent } from './wishlist/wishlist.component';
+import { AccountComponent } from './account/account.component';
 
 
 export const routes: Routes = [
@@ -74,5 +76,11 @@ export const routes: Routes = [
     },
     {
         path: "registration", component: RegistrationComponent
+    },
+    {
+        path: "wishlist", component: WishlistComponent
+    },
+    {
+        path: "account", component: AccountComponent
     }
 ];
