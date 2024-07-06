@@ -5,10 +5,11 @@ import { PlantService } from '../services/plant.service';
 import { CommonModule } from '@angular/common';
 import { NgIf } from '@angular/common';
 
+
 @Component({
   selector: 'app-myplants-main',
   standalone: true,
-  imports: [RouterLink, NgIf,CommonModule],
+  imports: [RouterLink, NgIf, CommonModule],
   templateUrl: './myplants-main.component.html',
   styleUrl: './myplants-main.component.css'
 })
@@ -16,6 +17,6 @@ export class MyplantsMainComponent{
   plants:Plant[] = [];
   constructor(private plantService:PlantService){
     
-      this.plants = plantService.getAll();
+      this.plants = plantService.getOwnedPlants();
     }
 }

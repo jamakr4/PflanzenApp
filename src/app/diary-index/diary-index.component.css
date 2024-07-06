@@ -1,26 +1,17 @@
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #090D05;
-    color: white;
-}
 
 select {
     position:absolute;
     top: 18vh;
     background-color: #2F2F2F;
     color: white;
-    padding: 10px 15px;
+    padding: 1.2vh 1.8vh;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 2vh;
     outline: none;
     cursor: pointer;
-    width: 200px;
-    margin: 10px 0;
+    width: 25vh;
+    margin: 1.2vh 0;
     
 }
 select option {
@@ -38,69 +29,66 @@ select option {
 }
 .dynamic-div {
     border: 1px solid #ccc;
-    padding: 20px;
-    margin: 20px;
-    width: 300px;
+    padding: 2vh;
+    margin: 2vh;
+    width: 40vh;
     position: relative;
-    border-radius:10px;
+    border-radius:2vh;
     color: white;
     background-color: #2F2F2F;
     list-style-type: none;
-    left:-15px;
+    
 }
 
 .dynamic-div h1 {
     text-align: center;
-    font-size: 24px;
-    margin: 0 auto 10px auto;
-    border-radius:10px;
+    font-size: 2.9vh;
+    margin: 0 auto 2vh auto;
+    border-radius:1vh;
     width: 80%;
 }
 
 .dynamic-div p {
-    font-size: 18px;
+    font-size: 2vh;
     margin: 0;
-    border-radius:10px;
-}
-
-.dynamic-div img {
-    width: 100%;
-    margin-top: 10px;
-    border-radius:10px;
+    border-radius:1vh;
 }
 
 .delete-icon {
     position: absolute;
-    top: 5px;
-    right: 5px;
+    top: 0.2vh;
+    right: 0.2vh;
     cursor: pointer;
     color: red;
-    font-size: 20px;
+    font-size: 1.8vh;
     background: none;
     border: none;
 }
 
 .edit-icon {
     position: absolute;
-    top: 5px;
-    left: 5px;
+    top: 0.2vh;
+    left: 0.2vh;
     cursor: pointer;
     color: green;
-    font-size: 20px;
+    font-size: 1.8vh;
     background: none;
     border: none;
 }
 
 .plant-text {
     text-decoration: underline;
-    margin-top: 10px;
+    margin-top: 1vh;
 }
 
 .add {
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin: 2vh;
+    margin: 4vh;
     margin-left: 29.5vh;
+    padding: 0.5vh 1vh; 
+    width: 12vh; 
+    height: 5.5vh; 
 }
 
 .filter {

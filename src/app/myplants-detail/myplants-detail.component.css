@@ -1,0 +1,36 @@
+div {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+img {
+    width: 20vh;
+    height: 20vh;
+    margin-top: 1vh;
+    border-radius: 2vh;
+}
+.scroll-list{
+
+    overflow-y: auto;
+    margin-top: 0px;
+    max-height: 60vh;
+    display: flex;
+    justify-content: left;
+    text-align: left;
+}
+.kontainer{
+    align-items: left;
+    background-color: rgb(40, 40, 40);
+    width: 20em;
+    border-radius: 2vh;
+    text-align: left;
+    
+}
+a{
+    margin-top: 2vh;
+}
+
+ 

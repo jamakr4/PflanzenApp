@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { NgIf } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { RouterOutlet } from '@angular/router';
+import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { NotFoundComponent } from '../not-found/not-found.component';
 
@@ -22,14 +23,18 @@ import { NotFoundComponent } from '../not-found/not-found.component';
 export class ShopLandingPageComponent {
 
   plants: Plant[] = [];
-  constructor(private plantService: PlantService, activatedRoute: ActivatedRoute) {
+  constructor(private plantService: PlantService, private router: Router, activatedRoute: ActivatedRoute) {
     activatedRoute.params.subscribe((params) => {
       if (params['searchTerm'])
         this.plants = this.plantService.getAllPlantsBySearchTerm(params['searchTerm']);
       else
         this.plants = plantService.getAll();
     })
-  }
 
+
+  }
+  navigateToQuizLandingPage() {
+    this.router.navigate(['/quiz-landing-page']);
+  }
 }
 
