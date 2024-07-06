@@ -91,3 +91,7 @@ button.error {
 .space-between {
   justify-content: space-between;
 }
+
+a {
+  text-decoration: none;
+}
