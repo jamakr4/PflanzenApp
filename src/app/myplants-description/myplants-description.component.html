@@ -1,10 +1,13 @@
 <div *ngIf="p">
     
   <h2>{{ p.name }}</h2>
+  <div class ="scroll-list">
     <div class="grau" ><h3>Everything you need to know </h3>
     <p> {{ p.description }}</p>
     <a [routerLink]="['/myplants-detail', p.id]">back to homepage</a>
     </div>
+    
+  </div>
   </div>
 
   

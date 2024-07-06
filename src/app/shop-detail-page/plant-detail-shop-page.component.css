@@ -1,8 +1,16 @@
 #addToCart
 {
+    height:6vh;
     background-color: goldenrod;
+   
 }
-
+#addToPlants{
+    background-color: brown;
+    margin-left: 15rem;
+    margin-top: 0rem;
+    height: 6vh;
+    
+}
 img
 {
     border-radius: 2rem;
@@ -35,12 +43,11 @@ img
 .about {
     background: var(--secondary-color);
     padding: 2vh;
-    margin-bottom: 2vh;
     border-radius: 2vh;
 }
 
 p {
-    margin-bottom: 1vh;
+    
 }
 
 ul {

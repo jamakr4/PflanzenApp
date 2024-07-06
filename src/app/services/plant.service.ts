@@ -27,5 +27,16 @@ export class PlantService {
   }
 
   getOwnedPlants(): Plant[] {
-    return this.getAll().filter(plant =>this.ownedPlant.includes(plant.id));  }
-}
+    const ownedPlants: Plant[] = [];
+    this.ownedPlant.forEach(plantId => {
+    const plant = this.getPlantByID(plantId.toString());
+    
+    ownedPlants.push(plant);
+      });
+    return ownedPlants; 
+   }
+  addToMyplants(plantId:number): void {
+    this.ownedPlant.push(plantId);
+  }
+  
+  }

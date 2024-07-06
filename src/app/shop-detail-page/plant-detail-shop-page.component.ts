@@ -20,7 +20,7 @@ export class PlantDetailShopPageComponent
 {
 
   plant!: Plant;
-  constructor(activatedRoute:ActivatedRoute, plantservice:PlantService, private cartService:CartService, private router:Router) 
+  constructor(activatedRoute:ActivatedRoute,private plantservice:PlantService, private cartService:CartService, private router:Router) 
   {
     activatedRoute.params.subscribe((params) => 
       {
@@ -32,5 +32,9 @@ export class PlantDetailShopPageComponent
   {
     this.cartService.addToCart(this.plant);
     this.router.navigateByUrl('/cart-page');
+  }
+  addMyplants() {
+    this.plantservice.addToMyplants(this.plant.id);
+    alert('Die Pflanze wurde erfolgreich hinzugefügt');
   }
 }

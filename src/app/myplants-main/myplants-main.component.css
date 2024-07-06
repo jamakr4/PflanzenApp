@@ -11,13 +11,13 @@
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    margin-top: 125px;
+    margin-top: 13vh;
 }
 
 
 .scroll-list {
     overflow-y: auto;
-    max-height: 50vh; 
+    max-height: 38vh; 
     width: 100%;
     display: flex;
     justify-content: center;

@@ -7,10 +7,10 @@ div {
 }
 
 img {
-    width: 300px;
-    height: 300px;
-    margin-top: 150px;
-    border-radius: 25px;
+    width: 20vh;
+    height: 20vh;
+    margin-top: 1vh;
+    border-radius: 2vh;
 }
 .scroll-list{
 
@@ -18,17 +18,19 @@ img {
     margin-top: 0px;
     max-height: 60vh;
     display: flex;
-    justify-content: center;
+    justify-content: left;
+    text-align: left;
 }
 .kontainer{
+    align-items: left;
     background-color: rgb(40, 40, 40);
     width: 20em;
-    border-radius: 20px;
+    border-radius: 2vh;
     text-align: left;
     
 }
 a{
-    margin-bottom: 20px;
+    margin-top: 2vh;
 }
 
  

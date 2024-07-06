@@ -14,10 +14,18 @@
         </div>
 
     </div>
+        
     <div class="right">
-        <button (click)="addToCart()" id="addToCart"><i class="fa-solid fa-cart-plus"></i> Add to cart</button> <br>
+        <div class="button-container">
+
+        <button (click)="addMyplants()" id="addToPlants">Add to myplants</button>
+       <button (click)="addToCart()" id="addToCart"><i class="fa-solid fa-cart-plus"></i> Add to cart</button> 
+       
+        </div>   
+            <br>
         <div class="about">
-            
+            <div class="button-container">
+
             
             <ul>
                 <li *ngIf="plant.water != null"><i class="fa-solid fa-droplet"></i> {{plant.water}} Milliliters of water per day</li>
