@@ -6,34 +6,42 @@ import { filter } from 'rxjs/operators';
 @Component({
   selector: 'app-taskbar',
   standalone: true,
-  imports: [RouterLink],
   templateUrl: './taskbar.component.html',
-  styleUrl: './taskbar.component.css'
+  styleUrls: ['./taskbar.component.css'],
+  imports: [RouterLink]
 })
 export class TaskbarComponent implements OnInit {
   pageLink = "";
+
   constructor(private location: Location, private router: Router) { }
 
   ngOnInit() {
-    let path = this.location.path();
+    this.setPageLink(this.location.path());
+
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe(() => {
-      let path = this.location.path();
-      switch (path) {
-        case "/shop":
-          this.pageLink = "shop";
-          break;
-        case "/profil":
-          this.pageLink = "profil";
-          break;
-        case "/home":
-          this.pageLink = "home";
-          break;
-        case "/myplants":
-          this.pageLink = "myplants";
-          break;
-      }
+      this.setPageLink(this.location.path());
     });
+  }
+
+  private setPageLink(path: string) {
+    switch (path) {
+      case "/shop":
+        this.pageLink = "shop";
+        break;
+      case "/profil":
+        this.pageLink = "profil";
+        break;
+      case "/home":
+        this.pageLink = "home";
+        break;
+      case "/myplants":
+        this.pageLink = "myplants";
+        break;
+      default:
+        this.pageLink = "";
+        break;
+    }
   }
 }
