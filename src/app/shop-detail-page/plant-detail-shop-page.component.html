@@ -7,41 +7,37 @@
         <img [src]="plant.imageUrl[0]">
         <div class="info">
             <h2>{{plant.name}}</h2>
-            <li>Scientific Name: 
-                <br>{{plant.scientificName}}</li>
+            <li>Scientific Name:
+                <br>{{plant.scientificName}}
+            </li>
             <li> {{plant.price | currency}}</li>
             <div class="rating"><i class="fa-solid fa-star"></i> {{plant.rating}}</div>
         </div>
-
     </div>
-        
+
     <div class="right">
         <div class="button-container">
-        <button  id="addToWishlist">Add to Wishlist</button>
-        <button (click)="addMyplants()" id="addToPlants">Add to myplants</button>
-       <button (click)="addToCart()" id="addToCart"><i class="fa-solid fa-cart-plus"></i> Add to cart</button> 
-       
-        </div>   
-            <br>
+            <button id="addToWishlist"><i class="fa-solid fa-bookmark"></i> Add to Wishlist</button>
+            <button (click)="addMyplants()" id="addToPlants"><i class="fa-solid fa-seedling"></i> Add to My Plants</button>
+            <button (click)="addToCart()" id="addToCart"><i class="fa-solid fa-cart-plus"></i> Add to cart</button>
+        </div>
+        <br>
         <div class="about">
-            <div class="button-container">
-
-            
-            <ul>
-                <li *ngIf="plant.water != null"><i class="fa-solid fa-droplet"></i> {{plant.water}} Milliliters of water per day</li>
-                <li *ngIf="plant.temperature != null"><i class="fa-solid fa-temperature-quarter"></i> {{plant.temperature}}°C</li>
-                <li *ngIf="plant.sunlight.length > 0"><i class="fa-solid fa-cloud-sun"></i> {{plant.sunlight}}</li>
-                <li *ngIf="plant.humidity.length > 0"><i class="fa-solid fa-wind"></i> {{plant.humidity}}</li>
-                <li *ngIf="plant.toughness.length > 0"><i class="fa-solid fa-shield"></i> CommonModule {{plant.toughness}}</li>
-                <li *ngIf="plant.indoor"><i class="fa-solid fa-plant-wilt"></i> Homeplant</li>
-                <li *ngIf="plant.outdoor"><i class="fa-solid fa-sun-plant-wilt"></i> Outdoor</li>
-                <li *ngIf="plant.tips.length > 0"><i class="fa-solid fa-triangle-exclamation"></i> {{plant.tips}}</li>
-            </ul>
             <h4><i class="fa-solid fa-circle-info"></i> More Information</h4>
             <p *ngIf="plant.description.length > 0">{{plant.description}}</p>
-            
+            <ul>
+                <li *ngIf="plant.water != null"><i class="fa-solid fa-droplet"></i> {{plant.water}} Milliliters of
+                    water per day</li>
+                <li *ngIf="plant.temperature != null"><i class="fa-solid fa-temperature-quarter"></i>
+                    {{plant.temperature}}°C</li>
+                <li *ngIf="plant.sunlight.length > 0"><i class="fa-solid fa-cloud-sun"></i> {{plant.sunlight}}</li>
+                <li *ngIf="plant.humidity.length > 0"><i class="fa-solid fa-wind"></i> {{plant.humidity}}</li>
+                <li *ngIf="plant.toughness.length > 0"><i class="fa-solid fa-shield"></i> CommonModule
+                    {{plant.toughness}}</li>
+                <li *ngIf="plant.indoor"><i class="fa-solid fa-plant-wilt"></i> Homeplant</li>
+                <li *ngIf="plant.outdoor"><i class="fa-solid fa-sun-plant-wilt"></i> Outdoor</li>
+                <li *ngIf="plant.tips.length > 0"><i class="fa-solid fa-triangle-exclamation"></i> {{plant.tips}}
+                </li>
+            </ul>
         </div>
-
-        <span></span>
     </div>
-</div>

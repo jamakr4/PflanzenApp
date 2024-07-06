@@ -1,24 +1,4 @@
-#addToCart
-{
-    height:6vh;
-    background-color: goldenrod;
-   
-}
-#addToPlants{
-    background-color: brown;
-    margin-left: 15rem;
-    margin-top: 0rem;
-    height: 6vh; 
-}
-#addToWishlist{
-    background-color: green;
-    margin-left: 15rem;
-    margin-top: 0rem;
-    height: 6vh; 
-}
-
-img
-{
+img {
     border-radius: 2rem;
     flex: 1 0;
     object-fit: cover;
@@ -32,7 +12,7 @@ img
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2vh;
+    gap: 0;
     color: var(--text-color);
     max-height: 74vh;
     overflow: hidden;
@@ -54,9 +34,7 @@ img
     border-radius: 2vh;
 }
 
-p {
-    
-}
+p {}
 
 ul {
     margin-left: 0;
@@ -93,7 +71,7 @@ li {
     text-align: center;
 }
 
-.right button {
+.button-container button {
     background: var(--button-color);
     transition: 1s ease;
     font-size: 2vh;
@@ -101,17 +79,30 @@ li {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: fit-content;
+    text-align: left;
+    flex: 33.3%;
+    font-size: 1.5vh;
 }
 
-.right button i {
+.button-container button i {
     margin-right: 1vh;
 }
 
-.right button:hover {
-    font-size: 2.5vh;
+.button-container button:hover {
+    font-size: 1.75vh;
     height: 6vh;
 }
 
+.right .button-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: min-content;
+    width: 100%;
+    gap: 1vh;
+}
 
 @media (min-aspect-ratio: 1/1) {
     ::-webkit-scrollbar {
@@ -129,5 +120,10 @@ li {
 
     ::-webkit-scrollbar-thumb:hover {
         background: var(--primary-color);
+    }
+
+
+    .container {
+        gap: 2vh;
     }
 }

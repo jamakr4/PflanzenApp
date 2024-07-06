@@ -28,24 +28,30 @@ export class HeaderComponent implements OnInit {
   private setHeaderTitle(path: string) {
     switch (path) {
       case "/shop":
-        this.headerTitle = "Pflanzen Shop";
+        this.headerTitle = "Pflant Shop";
         break;
       case "/profil":
-        this.headerTitle = "Ihr Profil";
+        this.headerTitle = "My Profile";
         break;
       case "/menu":
         this.headerTitle = "Weiteres";
         break;
+      case "/myplants":
+        this.headerTitle = "My Plants";
+        break;
       case "/diary-index-component":
       case "/diary-change-component/:id":
       case "/diary-input-component":
-        this.headerTitle = "Pflanzentagebuch";
+        this.headerTitle = "Plant Diary";
         break;
       case "/quiz":
-        this.headerTitle = "Pflanzen Quiz";
+        this.headerTitle = "Plant Form";
+        break;
+      case "/home":
+        this.headerTitle = "Plant App";
         break;
       default:
-        this.headerTitle = "Pflanzen App";
+        this.headerTitle = "Plant App";
         break;
     }
   }
