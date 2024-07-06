@@ -24,11 +24,74 @@ div div {
 .board {
   height: 35vh;
   background: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 2vh;
+  width: 100%;
+  max-width: 90vw;
+  overflow: hidden;
+  overflow-y: scroll;
+  gap: 1vh;
 }
 
 h1 {
   margin-bottom: 1vh;
   font-size: 2.5vh;
   text-align: justify;
+}
+
+.plantContainer {
+  padding: 1vh;
+  border-radius: 2vh;
+  background: var(--primary-color);
+  width: 100%;
+  margin: 0;
+  justify-content: left;
+}
+
+.plantContainer img {
+  height: auto;
+  max-width: 15vw;
+  border-radius: 2vh;
+  margin-right: 2vh;
+}
+
+.plantContainer p {
+  display: block;
+  width: 100%;
+  flex: 100%;
+  margin: 0;
+}
+
+.plantContainer p strong {
+  text-transform: capitalize;
+}
+
+.plantContainer .vertical {
+  padding: 0;
+  margin: 0;
+}
+
+.plantContainer a {
+  color: var(--text-color);
+}
+
+@media (min-aspect-ratio: 1/1) {
+  ::-webkit-scrollbar {
+    width: 1vh;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: none;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 2vh;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color);
+  }
 }
