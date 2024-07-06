@@ -1,1 +1,44 @@
-<p>account works!</p>
+<h1>Account</h1>
+
+<input type="text" placeholder="Enter your name here" [(ngModel)]="name" (blur)="updateName()">
+<input type="text" placeholder="Enter your email here" [(ngModel)]="email" (blur)="updateEmail()">
+<input type="text" placeholder="Enter your adress here" [(ngModel)]="adress" (blur)="updateAdress()">
+<input type="password" placeholder="Enter your password here" [(ngModel)]="password" (blur)="updatePassword()">
+
+<a routerLink="/prelogin" type="button" class="cbutton">Logout</a>
+
+
+<!--
+<div class="account-data">
+    <h3>Account-Data</h3>
+    <p>Name: {{ user.name }}</p>
+    <p>Email: {{ user.email }}</p>
+    <p>Adress: {{user.adress}}</p>
+</div>
+
+<div class="change-account">
+    <h3>Change account data</h3>
+    <form (ngSubmit)="">
+        <label>
+            Change name:
+            <input [(ngModel)]="user.name" name="name">
+        </label>
+        <br>
+        <label>
+            Change email:
+            <input [(ngModel)]="user.email" name="email">
+        </label>
+        <br>
+        <label>
+            Change adress:
+            <input [(ngModel)]="user.adress" name="adress">
+        </label>
+        <br>
+        <label>
+            Change password:
+            <input [(ngModel)]="user.password" name="password">
+        </label>
+        <button type="submit">Save</button>
+    </form>
+</div>
+-->

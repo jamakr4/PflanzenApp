@@ -7,13 +7,14 @@ import { RouterLink } from '@angular/router';
 import { RouterOutlet } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { NotFoundComponent } from '../not-found/not-found.component';
+import { AccountComponent } from '../account/account.component';
 
 
 
 @Component({
   selector: 'app-profil',
   standalone: true,
-  imports: [CommonModule, NgIf, RouterLink, RouterOutlet, NotFoundComponent],
+  imports: [CommonModule, NgIf, RouterLink, RouterOutlet, NotFoundComponent, AccountComponent],
   templateUrl: './profil.component.html',
   styleUrl: './profil.component.css'
 })
