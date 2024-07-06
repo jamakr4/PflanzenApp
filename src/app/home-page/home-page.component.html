@@ -4,5 +4,16 @@
   </div>
   <app-quote></app-quote>
   <h1>Reminders:</h1>
-  <div class="board"></div>
+  <div class="board">
+    <div class="plantContainer" *ngFor="let plant of plants">
+      <a [routerLink]="['/myplants-detail', plant.id]" class="horizontal space-between">
+        <img [src]="this.plant.imageUrl[0]" alt="">
+        <div class="vertical">
+          <p><strong>{{this.plant.name}}</strong></p>
+          <p><i class="fa-solid fa-droplet"></i> {{this.plant.water}} ml per week</p>
+          <p><i class="fa-solid fa-thumbtack"></i> Remind me</p>
+        </div>
+      </a>
+    </div>
+  </div>
 </div>
