@@ -8,7 +8,7 @@
 
 </div>
 
-<div id="quizbutton"> 
+<div id="quizbutton">
 
     <button class="quizbutton" (click)="navigateToQuizLandingPage()">Unsicher was du willst? Teste unser Quiz!</button>
 
@@ -16,7 +16,7 @@
 
 <div id="shopcontent">
     <h4>Shop our bestsellers</h4>
-    
+
     <div class="wrapper horizontal"> <!--Horizotal Scrollbar for Bestsellers-->
         <ng-container *ngFor="let item of plants" class="horizontal horizontal-scroll">
             <div class="item" *ngIf="item.bestseller">
@@ -24,18 +24,18 @@
                     <img [src]="item.imageUrl[0]" />
                     <div class="content horizontal">
                         <p><strong>{{item.name}}</strong> </p>
-                         <span>{{item.price | currency}} <br>
+                        <span>{{item.price | currency}} <br>
                             <i class="fa-solid fa-star"></i> {{item.rating}}</span>
                     </div>
                 </a>
             </div>
         </ng-container>
     </div>
-    
-    
-    
-    
-    
+
+
+
+
+
     <!--Alle Items einfügen -->
     <ul class="every-option">
         <li *ngFor="let p of plants">
@@ -43,8 +43,7 @@
                 <img [src]="p.imageUrl[0]" />
                 <div class="content">
                     <p>{{p.name}}</p>
-                      {{p.price | currency}} <br>
-                    
+                    {{p.price | currency}} <br>
                 </div>
             </a>
         </li>
