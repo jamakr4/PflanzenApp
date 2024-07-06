@@ -2,10 +2,15 @@
   <button>
     <i class="fa-solid fa-gear"></i> Settings
   </button>
-  <div class="horizontal space-between">
-    <p>Mode</p>
-    <p><a href="/menu" (click)="setMode('light')" [class.active]="currentMode === 'light'">Light</a>|<a href="/menu"
-        (click)="setMode('dark')" [class.active]="currentMode === 'dark'">Dark</a></p>
+  <div class="vertical">
+    <div class="horizontal space-between">
+      <p>Mode</p>
+      <p><a href="/menu" (click)="setMode('light')" [class.active]="currentMode === 'light'" class="leftlink">Light</a>|<a href="/menu" (click)="setMode('dark')" [class.active]="currentMode === 'dark'">Dark</a></p>
+    </div>
+    <div class="horizontal space-between">
+      <p>Your Location<br><span>Use lower case only.</span></p>
+      <input type="text" placeholder="Enter location here." [(ngModel)]="city" (blur)="updateCityInLocalStorage()">
+    </div>
   </div>
   <button>
     Imprint

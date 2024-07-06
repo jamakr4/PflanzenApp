@@ -11,13 +11,5 @@ import { WeatherDisplayComponent } from '../weather-display/weather-display.comp
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.css'
 })
-export class HomePageComponent implements OnInit {
-
-  constructor(private location: Location, private router: Router) { }
-
-  ngOnInit() {
-    if (!this.location.path()) {
-      this.router.navigate(['/home']);
-    }
-  }
+export class HomePageComponent {
 }

@@ -5,6 +5,7 @@ div {
 button {
   flex: 100%;
   width: 100%;
+  max-width: 90vw;
   margin-bottom: 1vh;
 }
 
@@ -13,7 +14,7 @@ div div {
   padding: 2vh;
   border-radius: 2vh;
   width: 100%;
-  max-width: 100%;
+  max-width: 90vw;
   margin-bottom: 2vh;
 }
 
@@ -21,6 +22,10 @@ a {
   margin: 0 2vh;
   text-decoration: none;
   color: var(--text-color);
+}
+
+.leftlink {
+  margin-left: 0.5vh;
 }
 
 a.active {
@@ -40,11 +45,39 @@ div div.impress {
   background: none;
   border-radius: 0;
   padding: 0 0;
-  height: 40vh;
+  height: 38vh;
   overflow-y: scroll;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+div div div.horizontal {
+  padding: 0;
+  margin: 0;
   width: 100%;
 }
 
+.horizontal p {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.horizontal p span {
+  opacity: 0.5;
+}
+
+.horizontal input {
+  padding: 1vh;
+  color: var(--text-color);
+  background: none;
+  border: none;
+  border-radius: 2vh;
+  width: 100%;
+}
+
+.horizontal input:focus {
+  outline: 2px solid var(--primary-color);
+}
 
 @media (min-aspect-ratio: 1/1) {
   ::-webkit-scrollbar {
