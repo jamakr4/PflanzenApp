@@ -1,1 +1,28 @@
-<p>wishlist works!</p>
+
+<div class="container">
+    <p>Wishlist Plants</p>
+    <div class="scroll-list">
+        <ul>
+            <li *ngFor="let p of wishlistPlants">
+                <a [routerLink]="['/myplants-detail', p.id]">
+                    <img [src]="p.imageUrl" alt="{{ p.name }}" />
+                </a>
+                <div class="content">
+                    <div class="name">
+                        {{ p.name }}
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<!--
+<h2>Wunschliste</h2>
+<ul>
+  <li *ngFor="let plant of wishlistPlants">
+    {{ plant.name }} - {{ plant.description }}
+  </li>
+</ul>
+-->

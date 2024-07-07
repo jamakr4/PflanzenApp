@@ -37,4 +37,10 @@ export class PlantDetailShopPageComponent
     this.plantservice.addToMyplants(this.plant.id);
     alert('Die Pflanze wurde erfolgreich hinzugefügt');
   }
+
+  //wishlist
+  addToWishlist() {
+    this.plantservice.addToWishlist(this.plant.id);
+    alert('Pflanze zur Wishlist hinzugefügt');
+  }
 }
