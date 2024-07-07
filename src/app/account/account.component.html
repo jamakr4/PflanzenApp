@@ -1,13 +1,13 @@
-<h1>Account</h1>
+<h1 id="acc">Account</h1>
 
-<input type="text" placeholder="Enter your name here" [(ngModel)]="name" (blur)="updateName()">
-<input type="text" placeholder="Enter your email here" [(ngModel)]="email" (blur)="updateEmail()">
-<input type="text" placeholder="Enter your adress here" [(ngModel)]="adress" (blur)="updateAdress()">
-<input type="password" placeholder="Enter your password here" [(ngModel)]="password" (blur)="updatePassword()">
+<div class="css-container">
+    <input type="text" placeholder="Enter your name here" [(ngModel)]="name" (blur)="updateName()">
+    <input type="text" placeholder="Enter your email here" [(ngModel)]="email" (blur)="updateEmail()">
+    <input type="text" placeholder="Enter your adress here" [(ngModel)]="adress" (blur)="updateAdress()">
+    <input type="password" placeholder="Enter your password here" [(ngModel)]="password" (blur)="updatePassword()">
+</div>
 
 <a routerLink="/prelogin" type="button" class="cbutton">Logout</a>
-
-
 <!--
 <div class="account-data">
     <h3>Account-Data</h3>

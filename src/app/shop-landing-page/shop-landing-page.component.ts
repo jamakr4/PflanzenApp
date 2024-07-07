@@ -12,6 +12,7 @@ import { NotFoundComponent } from '../not-found/not-found.component';
 
 
 
+
 @Component({
   selector: 'app-shop-landing-page',
   standalone: true,
@@ -32,9 +33,6 @@ export class ShopLandingPageComponent {
     })
 
 
-  }
-  navigateToQuizLandingPage() {
-    this.router.navigate(['/quiz-landing-page']);
   }
 }
 

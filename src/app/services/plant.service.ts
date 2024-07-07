@@ -9,6 +9,9 @@ export class PlantService {
 
   private ownedPlant: number[] = [1,2,5];
 
+  //wishlist
+  private wishlist: number[] = [];
+
   constructor() { }
 
   getAll():Plant[]
@@ -39,4 +42,20 @@ export class PlantService {
     this.ownedPlant.push(plantId);
   }
   
+  //wishlist
+  addToWishlist(plantId: number): void {
+    if (!this.wishlist.includes(plantId)) {
+      this.wishlist.push(plantId);
+    }
+  }
+
+  getWishlist(): Plant[] {
+    const wishlistPlants: Plant[] = [];
+    this.wishlist.forEach(plantId => {
+      const plant = this.getPlantByID(plantId.toString());
+      wishlistPlants.push(plant);
+    });
+    return wishlistPlants;
+  }
+
   }

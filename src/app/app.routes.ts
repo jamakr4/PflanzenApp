@@ -18,6 +18,9 @@ import { PreloginComponent } from './prelogin/prelogin.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { WishlistComponent } from './wishlist/wishlist.component';
 import { AccountComponent } from './account/account.component';
+import { QuizComponent } from './quiz/quiz.component';
+import { QuizLandingPageComponent } from './quiz-landing-page/quiz-landing-page.component';
+import path from 'node:path';
 
 
 export const routes: Routes = [
@@ -82,5 +85,8 @@ export const routes: Routes = [
     },
     {
         path: "account", component: AccountComponent
+    },
+    {
+        path: "quiz", component:QuizLandingPageComponent
     }
 ];
