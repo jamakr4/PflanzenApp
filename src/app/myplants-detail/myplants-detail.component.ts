@@ -27,6 +27,13 @@ import { RouterLink } from '@angular/router';
       this.plant = this.plantService.getPlantByID(id);
     });
     }
+    anpinnen(plant: any) {
+     plant.pinned = !plant.pinned;
+    }
+    isangepinnt(plant:any): boolean{
+      return plant.pinned;
+
+    }
   }
 
 

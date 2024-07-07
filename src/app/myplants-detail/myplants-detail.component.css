@@ -12,6 +12,14 @@ img {
     margin-top: 1vh;
     border-radius: 2vh;
 }
+.imgage-container button{
+    cursor: pointer;
+    margin-left: 7vh;
+
+}
+.imgage-container button:hover {
+    background-color: green;
+}
 .scroll-list{
 
     overflow-y: auto;
@@ -22,6 +30,7 @@ img {
     text-align: left;
 }
 .kontainer{
+    
     align-items: left;
     background-color: rgb(40, 40, 40);
     width: 20em;

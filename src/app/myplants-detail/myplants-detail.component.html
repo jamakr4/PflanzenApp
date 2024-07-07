@@ -1,23 +1,24 @@
-
-
 <div *ngIf="plant">
-    <h2>{{plant.name}}</h2>
-    <div class ="scroll-list">
-    <img  [src]="plant.imageUrl[0]" alt="{{plant.name}}"/>
+  <h2>{{plant.name}}</h2>
+  <div class="scroll-list">
+    <div class="image-container">
+    <img [src]="plant.imageUrl[0]" alt="{{plant.name}}" />
+    <button (click)="anpinnen(plant)">
+      <i class="fa-solid fa-thumbtack"></i>
+      {{ isangepinnt(plant) ? ' Unpin' : ' Pin' }}
+    </button>
+  </div>
     <div class="kontainer">
-    <p><strong>Scientific Name:</strong> {{ plant.scientificName }}</p>
-  <p><strong>Humidity:</strong> {{ plant.humidity }}</p>
-  <p><strong>Sunlight: </strong>{{plant.sunlight}}</p>
-  <p><strong>Category:</strong> {{ plant.category.join(', ') }}</p>
-  <p><strong>Water Needs:</strong> {{ plant.water }} ml</p>
-  <p><strong>Humidity:</strong> {{ plant.humidity }}</p>
-  <p><strong>Temperature:</strong> {{ plant.temperature }} °C</p>
- 
+      <p><strong>Name: </strong> {{ plant.nickname }}</p>
+      <p><strong>Size:</strong>{{ plant.size}}</p>
+      <p><strong> Age:</strong>  {{ plant.age }}</p>
+      <p><i class="fa-solid fa-cloud-sun"></i><strong> Sunlight: </strong>{{plant.sunlight}}</p>
+      <p><i class="fa-solid fa-plant-wilt"></i><strong> Category:</strong> {{ plant.category.join(', ') }}</p>
+      <p><i class="fa-solid fa-droplet"></i> <strong> Water Needs:</strong> {{ plant.water }} ml</p>
+      <p><i class="fa-solid fa-wind"></i> <strong> Humidity:</strong> {{ plant.humidity }}</p>
+      <p><i class="fa-solid fa-temperature-quarter"></i><strong> Temperature:</strong> {{ plant.temperature }} °C</p>
+    </div>
+
+  </div>
+  <a [routerLink]="['/myplants-description', plant.id]">More Details</a>
 </div>
-
-</div>
-<a [routerLink]="['/myplants-description', plant.id]">More Details</a>
-</div>
-
-
-
