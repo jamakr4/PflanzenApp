@@ -28,7 +28,7 @@ export class HeaderComponent implements OnInit {
   private setHeaderTitle(path: string) {
     switch (path) {
       case "/shop":
-        this.headerTitle = "Pflant Shop";
+        this.headerTitle = "Plant Shop";
         break;
       case "/profil":
         this.headerTitle = "My Profile";
