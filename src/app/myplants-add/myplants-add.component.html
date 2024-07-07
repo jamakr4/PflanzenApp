@@ -1,0 +1,17 @@
+<p>myplants-add works!</p>
+<div class="container">
+    <h1>Add a new Plant:</h1>
+    <div class="scroll-list"></div>
+    <ul>
+        <li *ngFor="let p of plants">
+            <a routerLink="/myplants">
+                <img [src]="p.imageUrl[0]" alt="{{ p.name }} " (click)="addPlant(p.id)" />
+            </a>
+            <div class="content">
+                <div class="name">
+                    {{ p.name }}
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>  
