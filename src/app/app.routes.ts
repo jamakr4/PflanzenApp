@@ -20,6 +20,7 @@ import { WishlistComponent } from './wishlist/wishlist.component';
 import { AccountComponent } from './account/account.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { QuizLandingPageComponent } from './quiz-landing-page/quiz-landing-page.component';
+import { MyplantsAddComponent } from './myplants-add/myplants-add.component';
 import path from 'node:path';
 
 
@@ -88,5 +89,8 @@ export const routes: Routes = [
     },
     {
         path: "quiz", component:QuizLandingPageComponent
+    },
+    {
+        path: "myplants-add", component:MyplantsAddComponent
     }
 ];
