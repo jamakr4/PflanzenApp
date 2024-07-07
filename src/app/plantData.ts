@@ -28,10 +28,11 @@ export const sample_plants: Plant[] = [
         petfriendly: false,
         allergyfriendly: true,
         imageUrl: ["/ Dracaena_sanderiana1.png", "/ Dracaena_sanderiana2.png", "/ Dracaena_sanderiana3.png"],
-
+        
         nickname: "",
         size: NaN,
         age: NaN,
+        pinned: false
     },
     {
         id: 1,
@@ -64,6 +65,7 @@ export const sample_plants: Plant[] = [
         nickname: "",
         size: NaN,
         age: NaN,
+        pinned: false
     },
     {
         id: 2,
@@ -96,6 +98,7 @@ export const sample_plants: Plant[] = [
         nickname: "",
         size: NaN,
         age: NaN,
+        pinned: false
     },
 
     {
@@ -129,6 +132,7 @@ export const sample_plants: Plant[] = [
         nickname: "",
         size: NaN,
         age: NaN,
+        pinned: false
     },
 
     {
@@ -162,6 +166,7 @@ export const sample_plants: Plant[] = [
         nickname: "",
         size: NaN,
         age: NaN,
+        pinned: false
     },
 
     {
@@ -195,6 +200,7 @@ export const sample_plants: Plant[] = [
         nickname: "",
         size: NaN,
         age: NaN,
+        pinned: false
     },
 
     {
@@ -228,6 +234,7 @@ export const sample_plants: Plant[] = [
         nickname: "",
         size: NaN,
         age: NaN,
+        pinned: false
     },
 
     {
@@ -261,6 +268,7 @@ export const sample_plants: Plant[] = [
         nickname: "",
         size: NaN,
         age: NaN,
+        pinned: false
     },
 
     {
@@ -294,6 +302,7 @@ export const sample_plants: Plant[] = [
         nickname: "",
         size: NaN,
         age: NaN,
+        pinned: false
     },
 
     {
@@ -327,6 +336,7 @@ export const sample_plants: Plant[] = [
         nickname: "",
         size: NaN,
         age: NaN,
+        pinned: false
     },
 
     {
@@ -360,6 +370,7 @@ export const sample_plants: Plant[] = [
         nickname: "",
         size: NaN,
         age: NaN,
+        pinned: false
     },
 
     {
@@ -393,6 +404,7 @@ export const sample_plants: Plant[] = [
         nickname: "",
         size: NaN,
         age: NaN,
+        pinned: false
     },
 
     {
@@ -426,6 +438,7 @@ export const sample_plants: Plant[] = [
         nickname: "",
         size: NaN,
         age: NaN,
+        pinned: false
     },
 
     {
@@ -459,6 +472,7 @@ export const sample_plants: Plant[] = [
         nickname: "",
         size: NaN,
         age: NaN,
+        pinned: false
     },
 
     {
@@ -492,6 +506,7 @@ export const sample_plants: Plant[] = [
         nickname: "",
         size: NaN,
         age: NaN,
+        pinned: false
     },
 
 ];

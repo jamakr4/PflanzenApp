@@ -30,4 +30,5 @@ export class Plant{
     nickname!: String;
     size!: number; //in cm
     age!: number; //in Months
+    pinned!: boolean; 
 }
