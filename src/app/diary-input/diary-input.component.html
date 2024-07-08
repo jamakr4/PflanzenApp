@@ -1,14 +1,16 @@
 <form (ngSubmit)="saveData()">
-    <label for="entry-title">Heading:</label>
-    <input type="text" id="entry-title" name="Überschrift" [(ngModel)]="entry.header" placeholder="Geben Sie eine Überschrift ein" required>
-  
-    <label for="entry-plant">Plant:</label>
-    <input type="text" id="entry-plant" name="Pflanze" [(ngModel)]="entry.pflanze" placeholder="Geben Sie eine Pflanze ein" required>
-  
-    <label for="entry-text">Text:</label>
-    <textarea id="entry-text" name="Text" [(ngModel)]="entry.text" placeholder="Geben Sie einen Text ein" required></textarea>
-  
-    <button type="submit">Save</button>
-  </form>
-  
- 
+  <label for="entry-title">Heading:</label>
+  <input type="text" id="entry-title" name="Überschrift" [(ngModel)]="entry.header" placeholder="Geben Sie eine Überschrift ein" required>
+
+  <label for="entry-plant">Plant:</label>
+  <select [(ngModel)]="entry.pflanze" name="Pflanze" (change)="onPlantChange($event)" required>
+    <option *ngFor="let plant of plantOptions" [value]="plant">{{ plant }}</option>
+    <option value="custom">+ Neue Pflanze Hinzufügen </option>
+  </select>
+  <input *ngIf="entry.pflanze === 'custom'" type="text" id="entry-plant-custom" name="PflanzeCustom" [(ngModel)]="customPlantName" placeholder="Geben Sie eine Pflanze ein">
+
+  <label for="entry-text">Text:</label>
+  <textarea id="entry-text" name="Text" [(ngModel)]="entry.text" placeholder="Geben Sie einen Text ein" required></textarea>
+
+  <button type="submit">Save</button>
+</form>

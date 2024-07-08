@@ -13,7 +13,23 @@ form {
     gap: 2.2vh;
     left: -20%;
 }
-
+select {
+    background-color: #2F2F2F;
+    color: white;
+    
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 2vh;
+    outline: none;
+    cursor: pointer;
+    
+    
+    
+}
+select option {
+    background-color: #2F2F2F;
+    color: white;
+}
 input[type="text"], input[type="file"], textarea {
     width: 100%;
     padding: 1.5vh;
@@ -44,7 +60,7 @@ input[type="file"]{
 }
 textarea {
     color:#fff;
-    height: 29vh;
+    height: 25vh;
     resize: vertical;
 }
 

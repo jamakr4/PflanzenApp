@@ -36,11 +36,14 @@ export class DiaryIndexComponent implements OnInit {
   }
 
   onDeleteEntry(entry: any): void {
-    const index = this.entries.indexOf(entry);
-    if (index !== -1) {
-      this.entries.splice(index, 1);
-      this.filterEntries();
-      localStorage.setItem('entries', JSON.stringify(this.entries));
+    const confirmation = confirm('Are you sure you want to delete this entry?');
+    if (confirmation) {
+      const index = this.entries.indexOf(entry);
+      if (index !== -1) {
+        this.entries.splice(index, 1);
+        this.filterEntries();
+        localStorage.setItem('entries', JSON.stringify(this.entries));
+      }
     }
   }
 }
