@@ -16,7 +16,7 @@ import { isPlatformBrowser } from '@angular/common';
 export class DiaryIndexComponent implements OnInit {
   entries: any[] = [];
   plantOptions: string[] = [];
-  selectedPlant: string = 'none'; 
+  selectedPlant: string = 'alle'; 
   filteredEntries: any[] = [];
 
   constructor(
@@ -35,22 +35,31 @@ export class DiaryIndexComponent implements OnInit {
     this.route.queryParams.subscribe(params => {
       console.log('Received query parameters:', params);
       const plant = params['plant'];
-      if (plant && this.plantOptions.includes(plant)) {
-        this.selectedPlant = plant;
+      
+      if (plant) {
+        if (this.plantOptions.includes(plant)) {
+          this.selectedPlant = plant;
+        } else {
+          this.selectedPlant = 'none'; 
+        }
       } else {
-        this.selectedPlant = 'none'; 
+        this.selectedPlant = 'alle'; 
       }
+
       this.filterEntries();
     });
+
+   
+    this.filterEntries();
   }
 
   filterEntries(): void {
     if (this.selectedPlant === 'none') {
       this.filteredEntries = []; 
     } else if (this.selectedPlant === 'alle') {
-      this.filteredEntries = this.entries;
+      this.filteredEntries = this.entries; 
     } else {
-      this.filteredEntries = this.entries.filter(entry => entry.pflanze === this.selectedPlant);
+      this.filteredEntries = this.entries.filter(entry => entry.pflanze === this.selectedPlant); 
     }
   }
 
