@@ -88,7 +88,10 @@ export const routes: Routes = [
         path: "account", component: AccountComponent
     },
     {
-        path: "quiz", component:QuizLandingPageComponent
+        path: "quiz-landing-page", component:QuizLandingPageComponent
+    },
+    {   
+        path:'quiz', component:QuizComponent
     },
     {
         path: "myplants-add", component:MyplantsAddComponent
