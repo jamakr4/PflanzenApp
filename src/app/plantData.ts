@@ -65,7 +65,7 @@ export const sample_plants: Plant[] = [
         nickname: "",
         size: NaN,
         age: NaN,
-        pinned: false
+        pinned: true
     },
     {
         id: 2,
