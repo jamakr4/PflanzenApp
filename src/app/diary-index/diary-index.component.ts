@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { Router, ActivatedRoute } from '@angular/router';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { DiaryEntryComponent } from '../diary-entry/diary-entry.component';
 
@@ -17,14 +18,25 @@ export class DiaryIndexComponent implements OnInit {
   selectedPlant: string = 'alle';
   filteredEntries: any[] = [];
 
-  constructor() {}
+  constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
     this.entries = JSON.parse(localStorage.getItem('entries') || '[]');
     const allPlants = this.entries.map(entry => entry.pflanze);
     const uniquePlantsSet = new Set(allPlants);
     this.plantOptions = [...Array.from(uniquePlantsSet)];
-    this.filterEntries();
+
+    
+    this.route.queryParams.subscribe(params => {
+      console.log('Received query parameters:', params);
+      const plant = params['plant'];
+      if (plant && this.plantOptions.includes(plant)) {
+        this.selectedPlant = plant;
+      } else {
+        this.selectedPlant = 'alle';
+      }
+      this.filterEntries();
+    });
   }
 
   filterEntries(): void {

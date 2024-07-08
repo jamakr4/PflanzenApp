@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./diary-input.component.css']
 })
 export class DiaryInputComponent implements OnInit {
-  entry: any = { pflanze: 'custom' }; // Set default to 'custom'
+  entry: any = { pflanze: 'custom' }; 
   plantOptions: string[] = [];
   customPlantName: string = '';
 
