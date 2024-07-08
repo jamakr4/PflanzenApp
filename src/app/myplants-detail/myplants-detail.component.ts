@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PlantService } from '../services/plant.service';
 import { Plant } from '../classes/plants';
-import { ActivatedRoute, Router } from '@angular/router'; // Import Router
+import { ActivatedRoute, Router } from '@angular/router';
 import { NgIf } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
@@ -17,7 +17,7 @@ export class MyplantsDetailComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private router: Router, // Inject Router
+    private router: Router, 
     private plantService: PlantService
   ) { }
 
