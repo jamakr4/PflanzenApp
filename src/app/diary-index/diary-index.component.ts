@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { Router, ActivatedRoute } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { DiaryEntryComponent } from '../diary-entry/diary-entry.component';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-diary-index',
@@ -18,15 +19,20 @@ export class DiaryIndexComponent implements OnInit {
   selectedPlant: string = 'alle';
   filteredEntries: any[] = [];
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(
+    private route: ActivatedRoute,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {}
 
   ngOnInit(): void {
-    this.entries = JSON.parse(localStorage.getItem('entries') || '[]');
-    const allPlants = this.entries.map(entry => entry.pflanze);
-    const uniquePlantsSet = new Set(allPlants);
-    this.plantOptions = [...Array.from(uniquePlantsSet)];
+    if (isPlatformBrowser(this.platformId)) {
+      
+      this.entries = JSON.parse(localStorage.getItem('entries') || '[]');
+      const allPlants = this.entries.map(entry => entry.pflanze);
+      const uniquePlantsSet = new Set(allPlants);
+      this.plantOptions = [...Array.from(uniquePlantsSet)];
+    }
 
-    
     this.route.queryParams.subscribe(params => {
       console.log('Received query parameters:', params);
       const plant = params['plant'];
@@ -54,7 +60,9 @@ export class DiaryIndexComponent implements OnInit {
       if (index !== -1) {
         this.entries.splice(index, 1);
         this.filterEntries();
-        localStorage.setItem('entries', JSON.stringify(this.entries));
+        if (isPlatformBrowser(this.platformId)) {
+          localStorage.setItem('entries', JSON.stringify(this.entries));
+        }
       }
     }
   }
