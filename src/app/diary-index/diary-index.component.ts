@@ -16,7 +16,7 @@ import { isPlatformBrowser } from '@angular/common';
 export class DiaryIndexComponent implements OnInit {
   entries: any[] = [];
   plantOptions: string[] = [];
-  selectedPlant: string = 'alle';
+  selectedPlant: string = 'none'; 
   filteredEntries: any[] = [];
 
   constructor(
@@ -26,7 +26,6 @@ export class DiaryIndexComponent implements OnInit {
 
   ngOnInit(): void {
     if (isPlatformBrowser(this.platformId)) {
-      
       this.entries = JSON.parse(localStorage.getItem('entries') || '[]');
       const allPlants = this.entries.map(entry => entry.pflanze);
       const uniquePlantsSet = new Set(allPlants);
@@ -39,14 +38,16 @@ export class DiaryIndexComponent implements OnInit {
       if (plant && this.plantOptions.includes(plant)) {
         this.selectedPlant = plant;
       } else {
-        this.selectedPlant = 'alle';
+        this.selectedPlant = 'none'; 
       }
       this.filterEntries();
     });
   }
 
   filterEntries(): void {
-    if (this.selectedPlant === 'alle') {
+    if (this.selectedPlant === 'none') {
+      this.filteredEntries = []; 
+    } else if (this.selectedPlant === 'alle') {
       this.filteredEntries = this.entries;
     } else {
       this.filteredEntries = this.entries.filter(entry => entry.pflanze === this.selectedPlant);
