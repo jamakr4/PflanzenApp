@@ -41,5 +41,10 @@ export class MyplantsDetailComponent implements OnInit {
       this.router.navigate(['/diary-index-component'], { queryParams: { plant: this.plant.name } });
     }
   }
+
+  deletePlant(plant: any): void {
+   plant.pinned = false;  
+   this.plantService.removeFromMyplants(plant.id);
+  }
 }
 

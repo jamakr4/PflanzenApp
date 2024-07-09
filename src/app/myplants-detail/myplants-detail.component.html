@@ -21,5 +21,6 @@
 
   </div>
   <a [routerLink]="['/myplants-description', plant.id]">More Details</a>
-  <button (click)="navigateToDiary()">Go to Diary</button>
+    <button (click)="navigateToDiary()">Go to Diary</button>
+    <a routerLink="/myplants"> <button id="del" (click)="deletePlant(plant)">Delete</button></a>
 </div>
