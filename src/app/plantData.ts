@@ -63,8 +63,8 @@ export const sample_plants: Plant[] = [
         imageUrl: ["/Ficus_benjamina1.png", "/Ficus_benjamina1.png", "/Ficus_benjamina1.png"],
 
         nickname: "",
-        size: NaN,
-        age: NaN,
+        size: 0,
+        age: 0,
         pinned: true
     },
     {
@@ -96,8 +96,8 @@ export const sample_plants: Plant[] = [
         imageUrl: ["/Ocimum_basilicum1.png", "/Ocimum_basilicum2.png", "/Ocimum_basilicum3.png"],
 
         nickname: "",
-        size: NaN,
-        age: NaN,
+        size: 0,
+        age: 0,
         pinned: false
     },
 
@@ -130,8 +130,8 @@ export const sample_plants: Plant[] = [
         imageUrl: ["/Crassula_ovata1.png", "/Crassula_ovata2.png", "/Crassula_ovata3.png"],
 
         nickname: "",
-        size: NaN,
-        age: NaN,
+        size: 0,
+        age: 0,
         pinned: false
     },
 
@@ -232,8 +232,8 @@ export const sample_plants: Plant[] = [
         imageUrl: ["/Hedra_helix1.png", "/Hedra_helix2.png", "/Hedra_helix3.png"],
 
         nickname: "",
-        size: NaN,
-        age: NaN,
+        size: 0,
+        age: 0,
         pinned: false
     },
 

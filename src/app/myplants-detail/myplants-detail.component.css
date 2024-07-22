@@ -16,10 +16,9 @@ img {
     cursor: pointer;
     margin-left: 7vh;
 
+
 }
-.imgage-container button:hover {
-    background-color: green;
-}
+
 .scroll-list{
 
     overflow-y: auto;
@@ -31,19 +30,65 @@ img {
 }
 .kontainer{
     
-    align-items: left;
+    align-items: flex-start;
     background-color: rgb(40, 40, 40);
     width: 20em;
     border-radius: 2vh;
     text-align: left;
+    padding-left: 2em;
+    color: white;
     
+}
+.kontainer button {
+    margin-left: 1vh;
 }
 a{
     margin-top: 2vh;
+
+}
+.strong{
+    text-align: center;
+    align-items: center;
+
 }
 
 #del{
     margin-bottom: 5.5em;
     margin-top: -0.5em;
 }
- 
+.inputfeld {
+    width: 15vh;
+}
+.size{
+    width: 5vh;
+}
+button {
+    background-color: #555; 
+    color: white; 
+    border: none; 
+    border-radius: 1vh; 
+    padding: 0.5em 1em; 
+    cursor: pointer; 
+    
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0; 
+    background-color: #333; 
+    font-family: Arial, sans-serif; 
+}
+h2 {
+    color: white; 
+    margin-bottom: 1vh; 
+}
+.scroll-list {
+    width: 100%; 
+}
+.kontainer p {
+    margin: 0.5em 0; 
+}
+
+  
