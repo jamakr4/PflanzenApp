@@ -41,6 +41,15 @@ export class PlantService {
   addToMyplants(plantId:number): void {
     this.ownedPlant.push(plantId);
   }
+
+  removeFromMyplants(plantId:number): void {
+    for(let i = 0; i < this.ownedPlant.length; i++){
+      if(plantId == this.ownedPlant[i]){
+        this.ownedPlant.splice(i, 1);
+        return;
+      }
+    }
+  }
   
   //wishlist
   addToWishlist(plantId: number): void {

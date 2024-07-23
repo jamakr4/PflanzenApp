@@ -9,14 +9,14 @@ import { RouterOutlet } from '@angular/router';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { NotFoundComponent } from '../not-found/not-found.component';
-
+import { CarousselComponent } from '../caroussel/caroussel.component';
 
 
 
 @Component({
   selector: 'app-shop-landing-page',
   standalone: true,
-  imports: [ShopheaderComponent, CommonModule, NgIf, RouterLink, RouterOutlet, NotFoundComponent
+  imports: [ShopheaderComponent, CommonModule, NgIf, RouterLink, RouterOutlet, NotFoundComponent, CarousselComponent
   ],
   templateUrl: './shop-landing-page.component.html',
   styleUrl: './shop-landing-page.component.css'

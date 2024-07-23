@@ -9,9 +9,21 @@
     </button>
   </div>
     <div class="kontainer">
-      <p><strong>Name: </strong> {{ plant.nickname }}</p>
-      <p><strong>Size:</strong>{{ plant.size}}</p>
-      <p><strong> Age:</strong>  {{ plant.age }}</p>
+      <p><strong>Name: </strong><span *ngIf="!editname">{{ plant.nickname|| plant.name }}</span>
+        <input *ngIf="editname"[(ngModel)]="plant.nickname"(blur)="saveNickname()" class="inputfeld"/>
+        <button class="edit-icon" (click)="edit()">&#9998;</button></p>
+        <p>
+          <strong>Size: </strong>
+          <span><input type="number" [(ngModel)]="plant.size"(blur)=updateSize() class="size" >cm</span>
+          
+         
+         </p>
+        <p>
+          <strong>Age: </strong>
+          <span><input type="number" [(ngModel)]="plant.age" (blur)="updateAge" class="size">months</span>
+          
+          
+        </p>
       <p><i class="fa-solid fa-cloud-sun"></i><strong> Sunlight: </strong>{{plant.sunlight}}</p>
       <p><i class="fa-solid fa-plant-wilt"></i><strong> Category:</strong> {{ plant.category.join(', ') }}</p>
       <p><i class="fa-solid fa-droplet"></i> <strong> Water Needs:</strong> {{ plant.water }} ml</p>
@@ -21,4 +33,6 @@
 
   </div>
   <a [routerLink]="['/myplants-description', plant.id]">More Details</a>
+    <button (click)="navigateToDiary()">Go to Diary</button>
+    <a routerLink="/myplants"> <button id="del" (click)="deletePlant(plant)">Delete</button></a>
 </div>
