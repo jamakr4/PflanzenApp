@@ -11,7 +11,8 @@
           <img [src]="this.plant.imageUrl[0]" alt="">
           <div class="vertical">
             <p><strong>{{this.plant.name}}</strong></p>
-            <p><i class="fa-solid fa-droplet"></i> {{this.plant.water}} ml per week</p>
+            <p *ngIf="this.plant.days + this.plant.hours + this.plant.minutes + this.plant.seconds > 0"><i class="fa-solid fa-droplet"></i> {{this.plant.wateramount}} ml in <span *ngIf="this.plant.days > 0">{{this.plant.days}}d, </span><span *ngIf="this.plant.hours > 0">{{this.plant.hours}}h, </span><span *ngIf="this.plant.minutes > 0">{{this.plant.minutes}}m, </span><span *ngIf="this.plant.seconds > 0">{{this.plant.seconds}}s</span></p>
+            <p *ngIf="this.plant.days + this.plant.hours + this.plant.minutes + this.plant.seconds <= 0"><i class="fa-solid fa-droplet"></i> Water this flower! {{this.plant.wateramount}} ml</p>
             <p><i class="fa-solid fa-thumbtack"></i> Remind me</p>
           </div>
         </a>
@@ -20,3 +21,4 @@
     </div>
   </div>
 </div>
+

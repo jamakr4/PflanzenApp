@@ -33,4 +33,9 @@ export class Plant{
     pinned!: boolean; 
     timeBetweenSessions!: number;
     waterTime!: Date;
+    days!: number;
+    hours!: number;
+    minutes!: number;
+    seconds!: number;
+    wateramount!: number;
 }

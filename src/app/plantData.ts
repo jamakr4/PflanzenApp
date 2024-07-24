@@ -27,13 +27,18 @@ export const sample_plants: Plant[] = [
         purpose: "Decoration",
         petfriendly: false,
         allergyfriendly: true,
-        imageUrl: ["/ Dracaena_sanderiana1.png", "/ Dracaena_sanderiana2.png", "/ Dracaena_sanderiana3.png"],
+        imageUrl: ["/Dracaena_sanderiana1.png", "/Dracaena_sanderiana2.png", "/Dracaena_sanderiana3.png"],
         nickname: "",
         size: NaN,
         age: NaN,
         pinned: false,
         timeBetweenSessions: 10080,
-        waterTime: new Date(Date.now() + 60 * 1000)
+        waterTime: new Date(Date.now() + 60 * 1000),
+        days: 0,
+        minutes: 0,
+        hours: 0,
+        seconds: 0,
+        wateramount: 0
     },
     {
         id: 1,
@@ -67,7 +72,12 @@ export const sample_plants: Plant[] = [
         age: 0,
         pinned: true,
         timeBetweenSessions: 1440,
-        waterTime: new Date(Date.now() + 60 * 1000)
+        waterTime: new Date(Date.now() + 60 * 1000),
+        days: 0,
+        minutes: 0,
+        hours: 0,
+        seconds: 0,
+        wateramount: 0
     },
     {
         id: 2,
@@ -101,7 +111,12 @@ export const sample_plants: Plant[] = [
         age: 0,
         pinned: false,
         timeBetweenSessions: 10080,
-        waterTime: new Date(Date.now() + 60 * 1000)
+        waterTime: new Date(Date.now() + 60 * 1000),
+        days: 0,
+        minutes: 0,
+        hours: 0,
+        seconds: 0,
+        wateramount: 0
     },
     {
         id: 3,
@@ -135,7 +150,12 @@ export const sample_plants: Plant[] = [
         age: 0,
         pinned: false,
         timeBetweenSessions: 10080,
-        waterTime: new Date(Date.now() + 60 * 1000)
+        waterTime: new Date(Date.now() + 60 * 1000),
+        days: 0,
+        minutes: 0,
+        hours: 0,
+        seconds: 0,
+        wateramount: 0
     },
     {
         id: 4,
@@ -169,7 +189,12 @@ export const sample_plants: Plant[] = [
         age: NaN,
         pinned: false,
         timeBetweenSessions: 1440,
-        waterTime: new Date(Date.now() + 60 * 1000)
+        waterTime: new Date(Date.now() + 60 * 1000),
+        days: 0,
+        minutes: 0,
+        hours: 0,
+        seconds: 0,
+        wateramount: 0
     },
     {
         id: 5,
@@ -192,18 +217,23 @@ export const sample_plants: Plant[] = [
         indoor: true,
         outdoor: true,
         maintenance: "Monthly",
-        expierience: "Beginner",
-        space: "Medium Space (e.g. Windowsill)",
-        purpose: "Air purification",
+        expierience: "Intermediate",
+        space: "Large Space (e.g. large Room)",
+        purpose: "Decoration",
         petfriendly: false,
         allergyfriendly: true,
-        imageUrl: ["/Sansevieria_trifasciata_Laurentii1.png", "/Sansevieria_trifasciata_Laurentii2.png", "/Sansevieria_trifasciata_Laurentii3.png"],
+        imageUrl: ["/Sansevieria_trifasciata1.png", "/Sansevieria_trifasciata2.png", "/Sansevieria_trifasciata3.png"],
         nickname: "",
-        size: NaN,
-        age: NaN,
-        pinned: false,
-        timeBetweenSessions: 43200,
-        waterTime: new Date(Date.now() + 60 * 1000)
+        size: 0,
+        age: 0,
+        pinned: true,
+        timeBetweenSessions: 20160,
+        waterTime: new Date(Date.now() + 60 * 1000),
+        days: 0,
+        minutes: 0,
+        hours: 0,
+        seconds: 0,
+        wateramount: 0
     },
     {
         id: 6,
@@ -237,7 +267,12 @@ export const sample_plants: Plant[] = [
         age: NaN,
         pinned: false,
         timeBetweenSessions: 43200,
-        waterTime: new Date(Date.now() + 60 * 1000)
+        waterTime: new Date(Date.now() + 60 * 1000),
+        days: 0,
+        minutes: 0,
+        hours: 0,
+        seconds: 0,
+        wateramount: 0
     },
     {
         id: 7,
@@ -271,7 +306,12 @@ export const sample_plants: Plant[] = [
         age: NaN,
         pinned: false,
         timeBetweenSessions: 10080,
-        waterTime: new Date(Date.now() + 60 * 1000)
+        waterTime: new Date(Date.now() + 60 * 1000),
+        days: 0,
+        minutes: 0,
+        hours: 0,
+        seconds: 0,
+        wateramount: 0
     },
     {
         id: 8,
@@ -305,7 +345,12 @@ export const sample_plants: Plant[] = [
         age: NaN,
         pinned: false,
         timeBetweenSessions: 720,
-        waterTime: new Date(Date.now() + 60 * 1000)
+        waterTime: new Date(Date.now() + 60 * 1000),
+        days: 0,
+        minutes: 0,
+        hours: 0,
+        seconds: 0,
+        wateramount: 0
     },
     {
         id: 9,
@@ -339,7 +384,12 @@ export const sample_plants: Plant[] = [
         age: NaN,
         pinned: false,
         timeBetweenSessions: 1440,
-        waterTime: new Date(Date.now() + 60 * 1000)
+        waterTime: new Date(Date.now() + 60 * 1000),
+        days: 0,
+        minutes: 0,
+        hours: 0,
+        seconds: 0,
+        wateramount: 0
     },
     {
         id: 10,
@@ -373,7 +423,12 @@ export const sample_plants: Plant[] = [
         age: NaN,
         pinned: false,
         timeBetweenSessions: 1440,
-        waterTime: new Date(Date.now() + 60 * 1000)
+        waterTime: new Date(Date.now() + 60 * 1000),
+        days: 0,
+        minutes: 0,
+        hours: 0,
+        seconds: 0,
+        wateramount: 0
     },
     {
         id: 11,
@@ -407,6 +462,11 @@ export const sample_plants: Plant[] = [
         age: NaN,
         pinned: false,
         timeBetweenSessions: 1440,
-        waterTime: new Date(Date.now() + 60 * 1000)
+        waterTime: new Date(Date.now() + 60 * 1000),
+        days: 0,
+        minutes: 0,
+        hours: 0,
+        seconds: 0,
+        wateramount: 0
     }
 ];

@@ -32,6 +32,11 @@ export class MyplantsOwnplantComponent {
   sunlight = new FormControl();
   timeBetweenSessions = new FormControl();
   waterTime = new FormControl();
+  days = new FormControl();
+  hours = new FormControl();
+  minutes = new FormControl();
+  seconds = new FormControl();
+  waterAmount = new FormControl();
 
   addPlant(){
   const newPlant: Plant ={
@@ -67,7 +72,12 @@ export class MyplantsOwnplantComponent {
     age: this.age.getRawValue(),
     pinned: false,
     timeBetweenSessions: this.timeBetweenSessions.getRawValue(),
-    waterTime: this.waterTime.getRawValue()
+    waterTime: this.waterTime.getRawValue(),
+    days: this.days.getRawValue(),
+    hours: this.hours.getRawValue(),
+    minutes: this.minutes.getRawValue(),
+    seconds: this.seconds.getRawValue(),
+    wateramount: this.waterAmount.getRawValue()
     }
     this.plantService.addToPlants(newPlant);
   }
