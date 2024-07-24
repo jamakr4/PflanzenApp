@@ -39,6 +39,7 @@
     <!--Alle Items einfügen -->
     <ul class="every-option">
         <li *ngFor="let p of plants">
+            <div *ngIf = "p.inStock">
                 <a routerLink="/details/{{p.id}}">
                     <img [src]="p.imageUrl[0]" />
                     <div class="content">
@@ -46,6 +47,7 @@
                         {{p.price | currency}} <br>
                     </div>
                 </a>
+            </div>
         </li>
     </ul>
 </div>
