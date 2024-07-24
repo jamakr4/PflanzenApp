@@ -5,13 +5,14 @@
         <ul>
             <li *ngFor="let p of wishlistPlants">
                 <a [routerLink]="['/myplants-detail', p.id]">
-                    <img [src]="p.imageUrl" alt="{{ p.name }}" />
+                    <img [src]="p.imageUrl[0]" alt="{{ p.name }}" />
                 </a>
                 <div class="content">
                     <div class="name">
                         {{ p.name }}
                         <!--Re-->
                     </div>
+                    <button (click)="removeFromWishlist(p.id)" class="fa-solid fa-trash">Remove</button>
                 </div>
             </li>
         </ul>

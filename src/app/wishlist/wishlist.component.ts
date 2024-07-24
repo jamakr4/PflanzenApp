@@ -20,4 +20,9 @@ export class WishlistComponent {
   constructor(private plantService: PlantService) {
     this.wishlistPlants = this.plantService.getWishlist();
   }
+
+  removeFromWishlist(plantId: number): void {
+    this.plantService.removeFromWishlist(plantId);
+    this.wishlistPlants = this.plantService.getWishlist(); // Aktualisieren der Liste nach dem Entfernen
+  }
 }

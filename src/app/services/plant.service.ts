@@ -58,6 +58,10 @@ export class PlantService {
     }
   }
 
+  removeFromWishlist(plantId: number): void {
+    this.wishlist = this.wishlist.filter(id => id !== plantId);
+  }
+
   getWishlist(): Plant[] {
     const wishlistPlants: Plant[] = [];
     this.wishlist.forEach(plantId => {
