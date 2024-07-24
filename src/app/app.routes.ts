@@ -21,6 +21,7 @@ import { AccountComponent } from './account/account.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { QuizLandingPageComponent } from './quiz-landing-page/quiz-landing-page.component';
 import { MyplantsAddComponent } from './myplants-add/myplants-add.component';
+import { MyplantsOwnplantComponent } from './myplants-ownplant/myplants-ownplant.component';
 import path from 'node:path';
 
 
@@ -95,5 +96,8 @@ export const routes: Routes = [
     },
     {
         path: "myplants-add", component:MyplantsAddComponent
+    },
+    {
+        path: "ownplant", component:MyplantsOwnplantComponent
     }
 ];

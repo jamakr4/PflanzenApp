@@ -1,0 +1,42 @@
+<h1>Create own Plant:</h1>
+<form>
+<label for="name">Name: </label>
+<input type="text" id="name" [formControl]="name" ngDefaultControl required>
+<label for="nickname">Nickname:</label>
+<input type="text" id="nickname" [formControl]="nickname" ngDefaultControl>
+<label for="size">Size in cm: </label>
+<input type="number" id="size" [formControl]="size" required ngDefaultControl>
+<label for="age">Age in Months:</label>
+<input type="number" id="age" [formControl]="age" required ngDefaultControl>
+<label for="sunlight">Sunlight:</label>
+<select id="sunlight" [formControl]="sunlight"  ngDefaultControl>
+    <option value="Partial Sun">Partial Sun</option>
+    <option value="Partial to full sun">Partial to full sun</option>
+    <option value="Indirect sun">Indirect sun</option>
+    <option value="Indirect to partial sun">Indirect to partial sun</option>
+    <option value="Direct sun">Direct sun</option>
+    <option value="Full sun">Full sun</option>
+</select>
+<label for="category1">Category 1: </label>
+<input type="text" id="category1" [formControl]="category1"  ngDefaultControl>
+<label for="category2">Category 2:</label>
+<input type="text" id="category2" [formControl]="category2"  ngDefaultControl>
+<label for="water">Water needs in ml:</label>
+<input type="number" id="water" [formControl]="water" placeholder="e.g. 20"  ngDefaultControl>
+<label for="maintenance">Maintenance:</label>
+<select id="maintenance" [formControl]="maintenance" ngDefaultControl>
+    <option value="daily">Daily</option>
+    <option value="weekly">Weekly</option>
+</select>
+<label for="temperature">Temperature:</label>
+<input type="text" id="temperature" [formControl]="temperature" placeholder="e.g. 20-30" ngDefaultControl>
+<label for="humidity">Humidity;</label>
+<select id="humidity" [formControl]="humidity" ngDefaultControl>
+    <option value="low">Low</option>
+    <option value="medium">Medium</option>
+    <option value="high">High</option>
+</select>
+<a routerLink="/myplants"><button (click)="addPlant()" >Save</button></a>
+</form>
+
+
