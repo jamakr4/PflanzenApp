@@ -7,6 +7,8 @@ import { Plant } from '../classes/plants';
 import { PlantService } from '../services/plant.service';
 import { CommonModule } from '@angular/common';
 import { NgIf } from '@angular/common';
+import { ApplicationRef } from '@angular/core';
+import { first } from 'rxjs';
 
 @Component({
   selector: 'app-home-page',
@@ -15,14 +17,11 @@ import { NgIf } from '@angular/common';
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.css'
 })
-
 export class HomePageComponent implements OnInit {
   plants: Plant[] = [];
   pinnedPlants: Plant[] = [];
 
-
-  constructor(private plantService: PlantService) {
-
+  constructor(private plantService: PlantService, private applicationRef: ApplicationRef) {
     this.plants = plantService.getOwnedPlants();
   }
 
@@ -30,7 +29,9 @@ export class HomePageComponent implements OnInit {
     this.plants = this.plantService.getOwnedPlants();
     this.pinnedPlants = this.plants.filter(plant => plant.pinned);
     this.pinnedPlants.forEach(plant => this.updatePinnedPlant(plant));
-    setInterval(() => this.checkWatering(), 1000);
+    this.applicationRef.isStable.pipe(first((isStable: boolean) => isStable)).subscribe(() => {
+      setInterval(() => this.checkWatering(), 1000);
+    });
   }
 
   daysIntoYear(date: Date): number {
