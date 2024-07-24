@@ -45,7 +45,7 @@ export class HeaderComponent implements OnInit {
         this.headerTitle = "Plant Diary";
         break;
       case "/quiz":
-        this.headerTitle = "Plant Form";
+        this.headerTitle = "Plant Quiz";
         break;
       case "/home":
         this.headerTitle = "Plant App";
