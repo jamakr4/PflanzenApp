@@ -32,7 +32,7 @@ div div {
   max-width: 90vw;
   overflow: hidden;
   overflow-y: scroll;
-  gap: 0.5vh;
+  gap: 0.25vh;
 }
 
 h1 {

@@ -31,4 +31,6 @@ export class Plant{
     size!: any; //in cm
     age!: any; //in Months
     pinned!: boolean; 
+    timeBetweenSessions!: number;
+    waterTime!: Date;
 }
