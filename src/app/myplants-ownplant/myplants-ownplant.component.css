@@ -1,0 +1,15 @@
+form{
+    display: grid;
+    gap: 0.25em;
+    margin-top: 5em;
+    margin-bottom: 6em;
+    
+}
+ 
+h1{
+    margin-top: 1em;
+    position: fixed;
+}
+button{
+    margin-top: 0.25em;
+}

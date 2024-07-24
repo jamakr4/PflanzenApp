@@ -7,6 +7,7 @@ import { sample_plants } from '../plantData';
 })
 export class PlantService {
 
+  private currentId = 14;
   private ownedPlant: number[] = [1,2,5];
 
   //wishlist
@@ -27,6 +28,17 @@ export class PlantService {
   getPlantByID(PlantId: string): Plant  {
     const id = Number(PlantId); 
     return this.getAll().find(Plant => Plant.id === id) ?? new Plant();
+  }
+
+  addToPlants(plant: Plant): void{
+    alert("2");
+    sample_plants.push(plant);
+    this.addToMyplants(plant.id);
+  }
+
+  getNewId(): number{
+    this.currentId++;
+    return this.currentId;
   }
 
   getOwnedPlants(): Plant[] {
