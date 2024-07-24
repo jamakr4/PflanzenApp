@@ -15,64 +15,10 @@ import { NgIf } from '@angular/common';
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.css'
 })
-
-export class HomePageComponent implements OnInit {
+export class HomePageComponent {
   plants: Plant[] = [];
-  pinnedPlants: Plant[] = [];
+  constructor(private plantService: PlantService) {
 
-  constructor(private plantService: PlantService) {}
-
-  ngOnInit(): void {
-    this.plants = this.plantService.getOwnedPlants();
-    this.pinnedPlants = this.plants.filter(plant => plant.pinned);
-    this.pinnedPlants.forEach(plant => this.updatePinnedPlant(plant));
-    setInterval(() => this.checkWatering(), 1000);
-  }
-
-  daysIntoYear(date: Date): number {
-    return (Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()) - Date.UTC(date.getFullYear(), 0, 0)) / 24 / 60 / 60 / 1000;
-  }
-
-  updatePinnedPlant(plant: Plant): void {
-    let minutes = plant.timeBetweenSessions;
-    let hours = Math.floor(minutes / 60);
-    let days = Math.floor(hours / 24);
-    minutes = minutes - hours * 60 - days * 24 * 60;
-    hours = hours - days * 24;
-
-    const currentTime = new Date();
-    const timeToWater = new Date(currentTime.getTime() + days * 24 * 60 * 60 * 1000 + hours * 60 * 60 * 1000 + minutes * 60 * 1000);
-    plant.waterTime = timeToWater;
-  }
-
-  checkWatering(): void {
-    const currentTime = new Date();
-    this.pinnedPlants.forEach(plant => {
-      const timeTillWater = plant.waterTime.getTime() - currentTime.getTime();
-      let days = Math.floor(timeTillWater / (24 * 60 * 60 * 1000));
-      let hours = Math.floor((timeTillWater % (24 * 60 * 60 * 1000)) / (60 * 60 * 1000));
-      let minutes = Math.floor((timeTillWater % (60 * 60 * 1000)) / (60 * 1000));
-      let seconds = Math.floor((timeTillWater % (60 * 1000)) / 1000);
-      
-      let multiplier = 1;
-      switch (plant.maintenance) {
-        case 'Monthly':
-          multiplier = 30;
-          break;
-        case 'Weekly':
-          multiplier = 7;
-          break;
-        case 'Medium':
-        case 'Daily':
-        default:
-          multiplier = 1;
-      }
-
-      let wassermenge = plant.water * multiplier / (plant.timeBetweenSessions / 60 / 24);
-
-      if (timeTillWater <= 0) {
-        console.error('Du musst gießen');
-      }
-    });
+    this.plants = plantService.getOwnedPlants();
   }
 }

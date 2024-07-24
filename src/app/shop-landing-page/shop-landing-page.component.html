@@ -4,17 +4,17 @@
 
 <app-not-found [visible]="!plants || !plants.length"></app-not-found>
 
-<div id="carousel">
 
-</div>
-
-<div id="quizbutton">
-
-    <app-caroussel></app-caroussel>
-
-</div>
 
 <div id="shopcontent">
+
+<div id="carousel">
+    <div id="quizbutton">
+
+        <app-caroussel></app-caroussel>
+
+    </div>
+</div>
     <h4>Shop our bestsellers</h4>
 
     <div class="wrapper horizontal"> <!--Horizotal Scrollbar for Bestsellers-->
@@ -39,7 +39,7 @@
     <!--Alle Items einfügen -->
     <ul class="every-option">
         <li *ngFor="let p of plants">
-            <div *ngIf = "p.inStock">
+            <div *ngIf="p.inStock">
                 <a routerLink="/details/{{p.id}}">
                     <img [src]="p.imageUrl[0]" />
                     <div class="content">
