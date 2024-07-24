@@ -1,5 +1,23 @@
 {
   "routes": [
-    "/"
+    "/",
+    "/account",
+    "/cart-page",
+    "/diary-index-component",
+    "/diary-input-component",
+    "/home",
+    "/login",
+    "/menu",
+    "/myplants",
+    "/myplants-add",
+    "/ownplant",
+    "/prelogin",
+    "/profil",
+    "/quiz",
+    "/quiz-landing-page",
+    "/registration",
+    "/shop",
+    "/shoppingcart",
+    "/wishlist"
   ]
 }
