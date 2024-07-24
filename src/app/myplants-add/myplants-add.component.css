@@ -1,3 +1,8 @@
+h1{
+    position: fixed;
+    overflow: hidden;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -23,6 +28,9 @@ ul {
     padding: 0;
     margin: 0;
     margin-bottom: 7em;
+    overflow: hidden;
+    overflow-y: scroll;
+    max-height: 55vh;
 }
 
 li {

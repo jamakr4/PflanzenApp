@@ -39,13 +39,13 @@
     <!--Alle Items einfügen -->
     <ul class="every-option">
         <li *ngFor="let p of plants">
-            <a routerLink="/details/{{p.id}}">
-                <img [src]="p.imageUrl[0]" />
-                <div class="content">
-                    <p>{{p.name}}</p>
-                    {{p.price | currency}} <br>
-                </div>
-            </a>
+                <a routerLink="/details/{{p.id}}">
+                    <img [src]="p.imageUrl[0]" />
+                    <div class="content">
+                        <p>{{p.name}}</p>
+                        {{p.price | currency}} <br>
+                    </div>
+                </a>
         </li>
     </ul>
 </div>

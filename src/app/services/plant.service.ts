@@ -31,7 +31,6 @@ export class PlantService {
   }
 
   addToPlants(plant: Plant): void{
-    alert("2");
     sample_plants.push(plant);
     this.addToMyplants(plant.id);
   }

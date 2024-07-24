@@ -19,33 +19,32 @@ export class MyplantsOwnplantComponent {
   constructor(private plantService:PlantService){
     this.plants = this.plantService.getAll();
   }
-  name = new FormControl("bob");
-  nickname = new FormControl("Sebastian");
-  size = new FormControl("20");
-  age = new FormControl("20");
-  category1 = new FormControl("20");
-  category2 = new FormControl("20");
-  water = new FormControl("20");
-  maintenance = new FormControl("20");
-  temperature = new FormControl("20");
-  humidity = new FormControl("Low");
-  sunlight = new FormControl("20");
+  name = new FormControl();
+  nickname = new FormControl();
+  size = new FormControl();
+  age = new FormControl();
+  category1 = new FormControl();
+  category2 = new FormControl();
+  water = new FormControl();
+  maintenance = new FormControl();
+  temperature = new FormControl();
+  humidity = new FormControl();
+  sunlight = new FormControl();
 
   addPlant(){
-    alert("test");
   const newPlant: Plant ={
     id: this.plantService.getNewId(),
-    name: this.name.toString(),
+    name: this.name.getRawValue(),
     scientificName: "Ficus benjamina",
     price: 0,
     description: "To be added",
     inStock: false,
-    category: [this.category1.toString(), this.category2.toString()],
+    category: [this.category1.getRawValue(), this.category2.getRawValue()],
     water: Number(this.water),
     toxicity: false,
-    humidity: this.humidity.toString(),
-    temperature: this.temperature.toString(),
-    sunlight: this.sunlight.toString(),
+    humidity: this.humidity.getRawValue(),
+    temperature: this.temperature.getRawValue(),
+    sunlight: this.sunlight.getRawValue(),
     toughness: "undefined",
     tips: ["This is a custom plant!"],
     promotion: false,
@@ -53,17 +52,17 @@ export class MyplantsOwnplantComponent {
     bestseller: false,
     indoor: true,
     outdoor: false,
-    maintenance: this.maintenance.toString(),
+    maintenance: this.maintenance.getRawValue(),
     expierience: "Intermediate",
     space: "Custom",
     purpose: "Decoration",
     petfriendly: false,
     allergyfriendly: false,
-    imageUrl: ["/Ficus_benjamina1.png", "/Ficus_benjamina1.png", "/Ficus_benjamina1.png"],
+    imageUrl: ["/Sansevieria_trifasciata2.png", "/Sansevieria_trifasciata2.png", "/Sansevieria_trifasciata2.png"],
 
-    nickname: this.nickname.toString(),
-    size: Number(this.size),
-    age: Number(this.age),
+    nickname: this.nickname.getRawValue(),
+    size: this.size.getRawValue(),
+    age: this.age.getRawValue(),
     pinned: false
     }
     this.plantService.addToPlants(newPlant);

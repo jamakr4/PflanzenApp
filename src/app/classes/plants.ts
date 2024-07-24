@@ -1,16 +1,16 @@
 export class Plant{
     id!: number;
-    name!: String;
+    name!: any;
     scientificName!: String;
     price!: number;
     description!: String;
     inStock!: boolean;
-    category!: String[];
+    category!: any[];
     water!: number; //avg weekly need in ml
     toxicity!: boolean;
-    humidity!: String;
-    temperature!: String; // In Celcius
-    sunlight!: String;
+    humidity!: any;
+    temperature!: any; // In Celcius
+    sunlight!: any;
     toughness!: String;
     tips!: String[];
     promotion!: boolean;
@@ -18,7 +18,7 @@ export class Plant{
     bestseller!: boolean; //For shop cat
     indoor!: boolean;
     outdoor!: boolean;
-    maintenance!: String;
+    maintenance!: any;
     expierience!: String;
     space!: String;
     purpose!: String;
@@ -27,8 +27,8 @@ export class Plant{
     imageUrl!: String[];
 
     //For the my Plant Area
-    nickname!: String;
-    size!: number; //in cm
-    age!: number; //in Months
+    nickname!: any;
+    size!: any; //in cm
+    age!: any; //in Months
     pinned!: boolean; 
 }
