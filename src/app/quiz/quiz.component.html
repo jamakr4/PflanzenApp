@@ -1,17 +1,18 @@
 
 <div *ngIf="!showRecommendations; else recommendations">
-    <h2>{{quizQuestions[index].question}}</h2>
-    <p>
-        <ng-container *ngFor="let answer of quizQuestions[index].answers">
-            <input [type]="quizQuestions[index].type" [name]="quizQuestions[index].name" [id]="answer.label" (click)="selectAnswer(answer)"> <label [for]="answer">{{answer.label}}</label><br>
+    <p id="frage">{{quizQuestions[index].question}}</p>
+    <p id="hintergrund-rechteck">
+        <ng-container  *ngFor="let answer of quizQuestions[index].answers">
+                <input  [type]="quizQuestions[index].type" [name]="quizQuestions[index].name" [id]="answer.label" (click)="selectAnswer(answer)"> <label [for]="answer">{{answer.label}}</label><br>
+       
         </ng-container>
 
     </p>
-  <button (click)="navigateToNextQuestion()">Next</button>
+  <button id="nextButton" (click)="navigateToNextQuestion()">Next</button>
 </div>
    
 <ng-template #recommendations>
-    <div> Diese Pflanzen: </div>
+    <div id="empfehlung"> Diese Pflanzen: </div>
 
     <div *ngFor="let pflanze of recommendedPlants">
         {{ pflanze.name }}

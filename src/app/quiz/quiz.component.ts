@@ -113,7 +113,7 @@ export class QuizComponent {
     },
 
     {
-      question: "Do you have any specific requirements or preferences for the plant?",
+      question: "Do you have any specific preferences for the plant?",
       type: 'checkbox',
       answers: [
         {

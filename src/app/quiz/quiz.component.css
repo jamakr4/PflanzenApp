@@ -1,0 +1,56 @@
+#nextButton {
+    position: absolute;
+      top: 50vh;
+      left: 30%;
+      padding: 10px 20px;
+      font-size: 48px;
+      font-weight: bold;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+
+    #frage{
+        position: absolute;
+        top: 20vh;
+        left: 15px;
+        padding-top: 3px;
+        padding-left: 20px;
+        padding-right: 20px;
+        background-color: #2F2F2F;
+        width: 400px;
+        height: 80px;
+        border-radius: 8px;
+        text-align: center;
+        font-size: 24px;
+      }
+
+      #empfehlung{
+        position: absolute;
+        padding-top: 5vh;
+        top: 20vh;
+        left: 15px;
+        background-color: #2F2F2F;
+        width: 400px;
+        height: 80px;
+        border-radius: 8px;
+        text-align: center;
+        font-size: 24px;
+      }
+
+      #hintergrund-rechteck{
+        position: absolute;
+        top:31vh;
+        left: 15px;
+        padding-top: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        background-color: #2F2F2F;
+        width: 400px;
+        height: 525px;
+        text-align: justify;
+        font-size: 24px;
+        border-radius: 8px;
+      }
