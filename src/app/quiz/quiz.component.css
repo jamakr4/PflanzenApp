@@ -1,9 +1,10 @@
 #nextButton {
     position: absolute;
-      top: 50vh;
-      left: 30%;
+      top: 73vh;
+      left: 15px;
       padding: 10px 20px;
       font-size: 48px;
+      width: 400px;
       font-weight: bold;
       color: white;
       border: none;
@@ -29,7 +30,7 @@
 
       #empfehlung{
         position: absolute;
-        padding-top: 5vh;
+        padding-top: 2vh;
         top: 20vh;
         left: 15px;
         background-color: #2F2F2F;
@@ -49,7 +50,7 @@
         padding-right: 20px;
         background-color: #2F2F2F;
         width: 400px;
-        height: 525px;
+        height: 350px;
         text-align: justify;
         font-size: 24px;
         border-radius: 8px;
