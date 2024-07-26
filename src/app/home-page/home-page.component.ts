@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
-import { Router, RouterLink } from '@angular/router';
+import { Router, NavigationEnd, RouterLink } from '@angular/router';
 import { QuoteComponent } from '../quote/quote.component';
 import { WeatherDisplayComponent } from '../weather-display/weather-display.component';
 import { Plant } from '../classes/plants';
@@ -9,6 +9,7 @@ import { CommonModule } from '@angular/common';
 import { NgIf } from '@angular/common';
 import { ApplicationRef } from '@angular/core';
 import { first } from 'rxjs';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-home-page',
@@ -21,7 +22,7 @@ export class HomePageComponent implements OnInit {
   plants: Plant[] = [];
   pinnedPlants: Plant[] = [];
 
-  constructor(private plantService: PlantService, private applicationRef: ApplicationRef) {
+  constructor(private plantService: PlantService, private applicationRef: ApplicationRef, private location: Location, private router: Router) {
     this.plants = plantService.getOwnedPlants();
   }
 
@@ -41,18 +42,18 @@ export class HomePageComponent implements OnInit {
   updatePinnedPlant(plant: Plant): void {
     const currentTime = new Date();
     plant.waterTime = new Date(currentTime.getTime() + plant.timeBetweenSessions * 60 * 1000);
-    
-    
+
+
   }
 
   checkWatering(): void {
     const currentTime = new Date();
     this.pinnedPlants.forEach(plant => {
       let timeTillWater = plant.waterTime.getTime() - currentTime.getTime();
-       plant.days = Math.floor(timeTillWater / (24 * 60 * 60 * 1000));
-       plant.hours = Math.floor((timeTillWater % (24 * 60 * 60 * 1000)) / (60 * 60 * 1000));
-       plant.minutes = Math.floor((timeTillWater % (60 * 60 * 1000)) / (60 * 1000));
-       plant.seconds = Math.floor((timeTillWater % (60 * 1000)) / 1000);
+      plant.days = Math.floor(timeTillWater / (24 * 60 * 60 * 1000));
+      plant.hours = Math.floor((timeTillWater % (24 * 60 * 60 * 1000)) / (60 * 60 * 1000));
+      plant.minutes = Math.floor((timeTillWater % (60 * 60 * 1000)) / (60 * 1000));
+      plant.seconds = Math.floor((timeTillWater % (60 * 1000)) / 1000);
 
       let multiplier = 1;
       switch (plant.maintenance) {
@@ -70,15 +71,6 @@ export class HomePageComponent implements OnInit {
 
       plant.wateramount = plant.water * multiplier;
 
-      
-
-      if (timeTillWater <= 0) {
-
-        console.log("Gießen")
-      
-       
-      }
-      
     });
   }
 }

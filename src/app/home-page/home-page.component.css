@@ -78,6 +78,12 @@ h1 {
   text-transform: capitalize;
 }
 
+.plantContainer button {
+  padding: 0;
+  margin: 0;
+  background: var(--primary-color);
+}
+
 .plantContainer .vertical {
   padding: 0;
   margin: 0;
