@@ -47,7 +47,7 @@ export class MyplantsOwnplantComponent {
     description: "To be added",
     inStock: false,
     category: [this.category1.getRawValue(), this.category2.getRawValue()],
-    water: Number(this.water),
+    water: Number(this.water.getRawValue()),
     toxicity: false,
     humidity: this.humidity.getRawValue(),
     temperature: this.temperature.getRawValue(),

@@ -50,6 +50,12 @@ export class HeaderComponent implements OnInit {
       case "/home":
         this.headerTitle = "Plant App";
         break;
+      case "/myplants-add":
+        this.headerTitle = "Add a new Plant!";
+      break;
+      case "/ownplant":
+        this.headerTitle = "Create a Plant!";
+      break;
       default:
         this.headerTitle = "Plant App";
         break;

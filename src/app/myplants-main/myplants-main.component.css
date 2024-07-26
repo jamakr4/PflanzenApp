@@ -1,7 +1,9 @@
-.button{
+button{
     justify-content: center;
     align-items: center;
     text-align: center;
+    width: 50%;
+    margin-top: 5em;
 
 }
 
@@ -11,7 +13,7 @@
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    margin-top: 13vh;
+    margin-top: 10vh;
 }
 
 
